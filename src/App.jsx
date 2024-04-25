@@ -22,6 +22,7 @@ export default function App() {
     setPopupOpen(true)
     setIframeLink(src)
     setIframeLoad(true)
+    setSearch('')
   }
 
   const closePopup = () => {
@@ -102,10 +103,10 @@ export default function App() {
           </div>
 
           <div className='mt-4 relative'>
-            <input className='w-full bg-zinc-700 p-3 rounded outline-none' type="text" name="" placeholder='Nome do filme...' id="" onChange={handlechange} />
+            <input className='w-full bg-zinc-700 p-3 rounded outline-none' type="text" name="" placeholder='Nome do filme...' id="" value={search} onChange={handlechange} />
 
             {filterMoviesContainer && (
-              <div className='bg-zinc-700 flex flex-wrap justify-center items-center gap-4 py-10 absolute w-full'>
+              <div className='bg-zinc-700 flex flex-wrap justify-center items-center gap-4 py-10 absolute w-full rounded-md'>
                 {filteredMovies.map((itemsMovie) => (
                   <div key={itemsMovie.id} onClick={() => openPopup(itemsMovie.link)}>
                     <img className='rounded-md cursor-pointer' src={itemsMovie.imagem} alt={itemsMovie.nome} />
