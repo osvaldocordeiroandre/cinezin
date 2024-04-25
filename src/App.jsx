@@ -78,6 +78,17 @@ export default function App() {
         </div>
       </header>
 
+      {iframeLoad && (
+            <div className='fixed top-[20%] left-[6%] z-[2000] bg-zinc-800 w-[90vw] h-[60vh] rounded-xl border-none animate-iframe-Fade'></div>
+          )}
+
+          {popupOpen && (
+            <div className='fixed top-[20%] left-[6%] z-[2000] '>
+              <iframe className='w-[90vw] h-[60vh] rounded-xl border-none relative' src={iframeLink} frameborder="0"></iframe>
+              <button className='absolute top-0 right-0 text-3xl z-[1000] border-none mt-[10px] mr-3 cursor-pointer bg-black p-[14px] text-white hover:bg-red-600 rounded-md transition-all' onClick={closePopup}>X</button>
+            </div>
+          )}
+
       <main className='mx-20 pt-10'>
         <div className='text-white'>
           <div>
@@ -89,17 +100,6 @@ export default function App() {
           <div>
             <span>Pesquise seus filmes favoritos</span>
           </div>
-
-          {iframeLoad && (
-            <div className='fixed top-[20%] z-[2000] bg-zinc-800 w-[90vw] h-[60vh] rounded-xl border-none animate-iframe-Fade'></div>
-          )}
-
-          {popupOpen && (
-            <div className='fixed top-[20%] z-[2000]'>
-              <iframe className='w-[90vw] h-[60vh] rounded-xl border-none relative' src={iframeLink} frameborder="0"></iframe>
-              <button className='absolute top-0 right-0 text-3xl z-[1000] border-none mt-[10px] mr-3 cursor-pointer bg-black p-[14px] text-white hover:bg-red-600 rounded-md transition-all' onClick={closePopup}>X</button>
-            </div>
-          )}
 
           <div className='mt-4 relative'>
             <input className='w-full bg-zinc-700 p-3 rounded outline-none' type="text" name="" placeholder='Nome do filme...' id="" onChange={handlechange} />
