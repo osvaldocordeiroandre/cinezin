@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 
-import { GiPerspectiveDiceSixFacesRandom } from "react-icons/gi";
 import { FaPlay } from "react-icons/fa";
 
 import Movies from '../src/assets/db/capas'
 import ImageSkelet from './Components/imageSkelet/ImageSkelet';
+import RandomMovie from './Components/random/RandomMovie';
+import ScrollToTop from 'react-scroll-to-top';
 
 export default function App() {
   const [search, setSearch] = useState('')
@@ -47,13 +48,17 @@ export default function App() {
 
   return (
     <div className='w-full h-full bg-zinc-800'>
+
+      <ScrollToTop smooth className='flex justify-center items-center hover:bg-orange-400 hover:color-white' />
+      
       <header className="bg-[linear-gradient(to_bottom,rgba(00,00,00,0.4),rgba(0,0,0,0.9)),url('https://pbs.twimg.com/media/ESRW1H0XUAEZU2l?format=jpg&name=large')] w-full h-[450px] bg-cover bg-center from-black sm:h-[570px]">
         <div className='flex items-center justify-between mx-8 pt-8'>
           <div>
             <h1 className='text-white font-bold text-2xl drop-shadow-xl cursor-pointer'>Cinezin</h1>
           </div>
-          <div>
-            <GiPerspectiveDiceSixFacesRandom className='cursor-pointer' size={30} color='white' />
+          <div className='group'>
+            <RandomMovie className='relative' openPopup={openPopup} />
+            <span className='text-white absolute text-xs hidden group-hover:flex'>filme aleatório</span>
           </div>
         </div>
 
@@ -109,7 +114,7 @@ export default function App() {
               <div className='bg-zinc-700 flex flex-wrap justify-center items-center gap-2 py-10 absolute w-full rounded-md'>
                 {filteredMovies.map((itemsMovie) => (
                   <div key={itemsMovie.id} onClick={() => openPopup(itemsMovie.link)}>
-                    <img className='rounded-md cursor-pointer' src={itemsMovie.imagem} alt={itemsMovie.nome} />
+                    <img className='rounded-md cursor-pointer hover:scale-[1.1] transition-transform' src={itemsMovie.imagem} alt={itemsMovie.nome} />
                   </div>
                 ))}
               </div>
