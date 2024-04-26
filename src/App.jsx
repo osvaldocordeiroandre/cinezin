@@ -106,7 +106,7 @@ export default function App() {
             <input className='w-full bg-zinc-700 p-3 rounded outline-none' type="text" name="" placeholder='Nome do filme...' id="" value={search} onChange={handlechange} />
 
             {filterMoviesContainer && (
-              <div className='bg-zinc-700 flex flex-wrap justify-center items-center gap-4 py-10 absolute w-full rounded-md'>
+              <div className='bg-zinc-700 flex flex-wrap justify-center items-center gap-2 py-10 absolute w-full rounded-md'>
                 {filteredMovies.map((itemsMovie) => (
                   <div key={itemsMovie.id} onClick={() => openPopup(itemsMovie.link)}>
                     <img className='rounded-md cursor-pointer' src={itemsMovie.imagem} alt={itemsMovie.nome} />
@@ -122,7 +122,7 @@ export default function App() {
             <span className='text-4xl font-light'>Recentes</span>
             <div className='bg-white h-1 w-20 mt-2'></div>
 
-            <div className='flex flex-wrap gap-4 justify-center items-center py-10 w-full overflow-hidden'>
+            <div className='flex flex-wrap gap-2 justify-center items-center py-10 w-full overflow-hidden'>
               {Movies.map((movie) => (
                 <div key={movie.id} onClick={() => openPopup(movie.link)}>
                   <ImageSkelet src={movie.imagem} alt={movie.nome} hash={movie.hash} />
