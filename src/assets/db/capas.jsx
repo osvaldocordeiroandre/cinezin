@@ -1,5 +1,12 @@
 const caps = [
     {
+        id: '28',
+        nome: 'Perfect Blue',
+        imagem: 'https://i.ibb.co/5nwCSBc/Perfect-Blue.jpg',
+        link: 'https://drive.google.com/file/d/10xyhvcQ-o5sFJrXCnkRsUBKCQ1euX2Dl/preview',
+        hash: 'L55F95-@RiMvbzxwj;MvV:M^MwRh'
+    },
+    {
         id: '27',
         nome: 'O Show de Truman - O Show da Vida',
         imagem: 'https://i.ibb.co/QF7SthJ/O-Show-de-Truman-O-Show-da-Vida.jpg',
