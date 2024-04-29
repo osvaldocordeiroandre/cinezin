@@ -1,5 +1,12 @@
 const caps = [
     {
+        id: '29',
+        nome: 'O Homem do Futuro',
+        imagem: 'https://i.ibb.co/HnsD5bd/O-Homem-do-Futuro.jpg',
+        link: 'https://drive.google.com/file/d/1d6qcnYX7AdBOuzqcbnUIQF1ScWJcxSVN/preview',
+        hash: 'LfNv-~%g?vxa~qRPW;W;V]Rjn#M{'
+    },
+    {
         id: '28',
         nome: 'Perfect Blue',
         imagem: 'https://i.ibb.co/5nwCSBc/Perfect-Blue.jpg',
