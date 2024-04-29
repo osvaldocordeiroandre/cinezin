@@ -48,7 +48,7 @@ export default function App() {
   }, [search])
 
   return (
-    <div className='w-full h-full bg-zinc-800'>
+    <div className='w-full h-full bg-zinc-800 flex flex-col justify-center items-center'>
 
       <ScrollToTop smooth className='flex justify-center items-center hover:bg-orange-400 hover:color-white' />
       <Header openPopup={openPopup} />
