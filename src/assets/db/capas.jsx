@@ -1,9 +1,30 @@
 const caps = [
     {
+        id: '32',
+        nome: '(500) Dias com Ela',
+        imagem: 'https://i.ibb.co/nmg3Npn/500-Dias-com-Ela.jpg',
+        link: 'https://drive.google.com/file/d/1jSxAdKuqLBXn5mYTkYA4_SJI8AwKADz9/preview',
+        hash: 'LJK_OXRPK-bwEVjFF~bc00jEEmR-'
+    },
+    {
+        id: '31',
+        nome: 'Eduardo e Mônica',
+        imagem: 'https://i.ibb.co/0mG8Ycq/Eduardo-e-M-nica.jpg',
+        link: 'https://drive.google.com/file/d/1NAnDf8l5nHbLGqfO6Tdyx1dCHTOnx922/preview',
+        hash: 'LQPg[R~Kv$bJ.ir;aLof?EZ*S#kB'
+    },
+    {
+        id: '30',
+        nome: 'Clube da Luta',
+        imagem: 'https://i.ibb.co/YB38nKs/Clube-da-Luta.jpg',
+        link: 'https://drive.google.com/file/d/1VAf17ekKHFLVZRCfr4SU8ev49Oq6BKZx/preview',
+        hash: 'LQLN0}ozE_IUy;ay-CRjt7$k$+kp'
+    },
+    {
         id: '29',
         nome: 'O Homem do Futuro',
         imagem: 'https://i.ibb.co/HnsD5bd/O-Homem-do-Futuro.jpg',
-        link: 'https://drive.google.com/file/d/1d6qcnYX7AdBOuzqcbnUIQF1ScWJcxSVN/preview',
+        link: 'https://drive.google.com/file/d/18WHDqNaWyQSoh7OuTyxDCXdHifxejdAe/preview',
         hash: 'LfNv-~%g?vxa~qRPW;W;V]Rjn#M{'
     },
     {
