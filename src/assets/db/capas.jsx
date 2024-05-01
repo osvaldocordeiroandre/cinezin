@@ -1,5 +1,19 @@
 const caps = [
     {
+        id: '34',
+        nome: 'Pulp Fiction: Tempo de Violência',
+        imagem: 'https://i.ibb.co/zb1SxbP/Pulp-Fiction-Tempo-de-Viol-ncia.jpg',
+        link: 'https://drive.google.com/file/d/1rgbDxcNlDBNPs3enUkNkUHoWgo_quJJj/preview',
+        hash: 'LZHdTmnhI@NG?9t6r?j?~6WCjbxZ'
+    },
+    {
+        id: '33',
+        nome: 'À Espera de um Milagre',
+        imagem: 'https://i.ibb.co/C2CpzqG/Espera-de-um-Milagre.jpg',
+        link: 'https://drive.google.com/file/d/1e_GaI9rEbzaEYxJMLLR7YulP80OVbhKA/preview',
+        hash: 'L7D9q+8w01W?029H?a?a00_N#RIT'
+    },
+    {
         id: '32',
         nome: '(500) Dias com Ela',
         imagem: 'https://i.ibb.co/nmg3Npn/500-Dias-com-Ela.jpg',
@@ -80,7 +94,7 @@ const caps = [
         id: '2',
         nome: 'Por água abaixo',
         imagem: 'https://i.ibb.co/njHLhTd/Por-gua-abaixo.png',
-        link: 'https://drive.google.com/file/d/1BEdzO5yEpnUbieapkJx3s8AUE4YBxprW/preview',
+        link: 'https://drive.google.com/file/d/1CUq6vAG_zHGMT7M7ZozZ_vkmnCkMJgBn/preview',
         hash: 'LdM@+Zxt_NtRxukCNGM{?bIVMxxu'
     },
     {
