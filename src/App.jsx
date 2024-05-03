@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 
 import Movies from '../src/assets/db/capas'
-import ScrollToTop from 'react-scroll-to-top';
 import Header from './Components/header/Header';
 import Popup from './Components/popup/Popup';
 import Search from './Components/search/Search';
 import MovieArea from './Components/moviearea/MovieArea';
 import IframeLoaded from './Components/iframeLoad/IframeLoaded';
+import ScrollTop from './Components/scrolltotop/ScrollTop';
 
 export default function App() {
   const [search, setSearch] = useState('')
@@ -50,9 +50,8 @@ export default function App() {
   return (
     <div className='w-full h-full bg-[#1E2122] flex flex-col justify-center items-center '>
 
-      <ScrollToTop smooth className='flex justify-center items-center hover:color-white bg-orange-400 hover:bg-orange-300 topscroll' />
       <Header openPopup={openPopup} />
-      
+      <ScrollTop />
       <IframeLoaded iframeLoad={iframeLoad} />
       <Popup closePopup={closePopup} iframeLink={iframeLink} popupOpen={popupOpen} />
 
