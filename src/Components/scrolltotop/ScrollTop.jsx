@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react'
 
-import { IoIosArrowRoundUp } from "react-icons/io";
-
 export default function ScrollTop() {
     const [backTop, setBackTop] = useState(false);
 
