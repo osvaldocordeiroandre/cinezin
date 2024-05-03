@@ -48,9 +48,9 @@ export default function App() {
   }, [search])
 
   return (
-    <div className='w-full h-full bg-zinc-800 flex flex-col justify-center items-center'>
+    <div className='w-full h-full bg-[#1E2122] flex flex-col justify-center items-center '>
 
-      <ScrollToTop smooth className='flex justify-center items-center hover:bg-orange-400 hover:color-white' />
+      <ScrollToTop smooth className='flex justify-center items-center hover:color-white bg-orange-400 hover:bg-orange-300 topscroll' />
       <Header openPopup={openPopup} />
       
       <IframeLoaded iframeLoad={iframeLoad} />
