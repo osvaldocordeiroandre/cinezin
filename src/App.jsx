@@ -50,8 +50,8 @@ export default function App() {
   return (
     <div className='w-full h-full bg-[#1E2122] flex flex-col justify-center items-center '>
 
-      <Header openPopup={openPopup} />
       <ScrollTop />
+      <Header openPopup={openPopup} />
       <IframeLoaded iframeLoad={iframeLoad} />
       <Popup closePopup={closePopup} iframeLink={iframeLink} popupOpen={popupOpen} />
 
