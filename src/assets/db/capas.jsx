@@ -1,5 +1,12 @@
 const caps = [
     {
+        id: '35',
+        nome: 'As Virgens Suicidas',
+        imagem: 'https://i.ibb.co/XyB3nyw/As-Virgens-Suicidas.jpg',
+        link: 'https://drive.google.com/file/d/1XF6mOBRjHu4LhNy6tlENvgM3CbGkvk7h/preview',
+        hash: 'LbNSD}I;IVWV?^smoLaylUn%slf6'
+    },
+    {
         id: '34',
         nome: 'Pulp Fiction: Tempo de Violência',
         imagem: 'https://i.ibb.co/zb1SxbP/Pulp-Fiction-Tempo-de-Viol-ncia.jpg',
