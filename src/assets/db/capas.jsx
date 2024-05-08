@@ -1,5 +1,12 @@
 const caps = [
     {
+        id: '36',
+        nome: 'Children of the Sea',
+        imagem: 'https://i.ibb.co/94rBmGX/Children-of-the-Sea.jpg',
+        link: 'https://drive.google.com/file/d/1d0QlBs635u80ZtKYGPxZcA65nxAGaI1p/preview',
+        hash: 'L999p3i{00o}yZfQDho#]_o}ETRP'
+    },
+    {
         id: '35',
         nome: 'As Virgens Suicidas',
         imagem: 'https://i.ibb.co/XyB3nyw/As-Virgens-Suicidas.jpg',
