@@ -29,7 +29,7 @@ export default function ScrollTop() {
     return (
         <>
             <div
-                className={`fixed bottom-10 right-10 z-[2px] cursor-pointer w-10 h-10 border-none shadow-lg bg-orange-500 rounded-lg hover:bg-orange-600 transition-all flex justify-center items-center`}
+                className='fixed bottom-10 right-10 z-[2px] cursor-pointer w-10 h-10 border-none shadow-lg bg-orange-500 rounded-lg hover:bg-orange-600 transition-all flex justify-center items-center'
                 style={{ transform: `scale(${backTop ? 1 : 0})`, transition: 'transform .4s ' }}
                 onClick={scrollUp}
             >
