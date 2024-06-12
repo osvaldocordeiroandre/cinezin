@@ -1,5 +1,12 @@
 const caps = [
     {
+        id: '37',
+        nome: 'Vem Dançar',
+        imagem: 'https://i.ibb.co/TrCpRh4/Vem-Dan-ar.jpg',
+        link: 'https://drive.google.com/file/d/1vHZqCNkVCT1U1WkT6V4lmOWW3XJfb5SD/preview',
+        hash: 'L4B{igTf00QRKb%3idIT4VIT.T.8'
+    },
+    {
         id: '36',
         nome: 'Children of the Sea',
         imagem: 'https://i.ibb.co/94rBmGX/Children-of-the-Sea.jpg',
