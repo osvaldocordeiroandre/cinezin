@@ -20,7 +20,7 @@ export default function Header({ openPopup }) {
                 </div>
             </div>
             
-            <Slide arrows={false}>
+            <Slide arrows={false} pauseOnHover={true}>
                 {SlideInfos.map((slide, index) => (
                     <header key={slide.id} style={{ 'backgroundImage': `url(${slide.imagem})` }} className='w-full h-[450px] bg-cover bg-center from-black sm:h-[570px] mt-8 relative'>
 
