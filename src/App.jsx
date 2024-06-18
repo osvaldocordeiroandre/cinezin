@@ -48,12 +48,14 @@ export default function App() {
   }, [search])
 
   return (
-    <div className='w-full h-full bg-[#1E2122] flex flex-col justify-center items-center '>
+    <div className='w-full h-full bg-[#1E2122] flex flex-col'>
 
       <ScrollTop />
       <Header openPopup={openPopup} />
+      <div className='flex justify-center items-center'>
       <IframeLoaded iframeLoad={iframeLoad} />
       <Popup closePopup={closePopup} iframeLink={iframeLink} popupOpen={popupOpen} />
+      </div>
 
       <main className='mx-20 pt-10'>
         <Search openPopup={openPopup} filterMoviesContainer={filterMoviesContainer} filteredMovies={filteredMovies} handlechange={handlechange} search={search} />
