@@ -1,5 +1,12 @@
 const caps = [
     {
+        id: '38',
+        nome: 'Mary e Max - Uma Amizade Diferente',
+        imagem: 'https://i.ibb.co/tLzDPth/Mary-e-Max-Uma-Amizade-Diferente.jpg',
+        link: 'https://drive.google.com/file/d/1S0-eL0OVku6fUWAKqbVnQy_U9R7rxhhw/preview',
+        hash: 'L29%xDIt00~W0M~W004oI900kWRk'
+    },
+    {
         id: '37',
         nome: 'Vem Dançar',
         imagem: 'https://i.ibb.co/TrCpRh4/Vem-Dan-ar.jpg',
