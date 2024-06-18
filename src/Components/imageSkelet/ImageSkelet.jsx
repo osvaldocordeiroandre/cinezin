@@ -16,7 +16,7 @@ export default function ImageSkelet({src, hash, alt}) {
   return (
     <>
         {!imageLoad ? <Blurhash className='animate-iframe-Fade' hash={hash} width={200} height={265} resolutionX={31} resolutionY={31} punch={1}/> :
-        <img className='rounded-md cursor-pointer' src={src} alt={alt} />
+        <img className='rounded-md cursor-pointer hover:scale-[1.1] transition-transform' src={src} alt={alt} />
         }
     </>
   )
