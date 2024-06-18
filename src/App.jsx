@@ -43,25 +43,37 @@ export default function App() {
     }
   }
 
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     FilterShow()
+
+    setTimeout(() => {
+      setLoading(false)
+    }, 2000)
   }, [search])
 
   return (
     <div className='w-full h-full bg-[#1E2122] flex flex-col'>
 
-      <ScrollTop />
-      <Header openPopup={openPopup} />
-      
-      <div className='flex justify-center items-center'>
-      <IframeLoaded iframeLoad={iframeLoad} />
-      <Popup closePopup={closePopup} iframeLink={iframeLink} popupOpen={popupOpen} />
-      </div>
+      {loading ? (
+        <span className='text-white flex justify-center items-center bg-[#1E2122] w-full h-screen font-bold text-2xl drop-shadow-xl animate-pulse'>Cinezin</span>
+      ) : (
+        <>
+          <ScrollTop />
+          <Header openPopup={openPopup} />
 
-      <main className='mx-20 pt-10'>
-        <Search openPopup={openPopup} filterMoviesContainer={filterMoviesContainer} filteredMovies={filteredMovies} handlechange={handlechange} search={search} />
-        <MovieArea openPopup={openPopup} Movies={Movies} />
-      </main>
+          <div className='flex justify-center items-center'>
+            <IframeLoaded iframeLoad={iframeLoad} />
+            <Popup closePopup={closePopup} iframeLink={iframeLink} popupOpen={popupOpen} />
+          </div>
+
+          <main className='mx-20 pt-10'>
+            <Search openPopup={openPopup} filterMoviesContainer={filterMoviesContainer} filteredMovies={filteredMovies} handlechange={handlechange} search={search} />
+            <MovieArea openPopup={openPopup} Movies={Movies} />
+          </main>
+        </>
+      )}
     </div>
   )
 }
