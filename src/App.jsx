@@ -7,6 +7,7 @@ import Search from './Components/search/Search';
 import MovieArea from './Components/moviearea/MovieArea';
 import IframeLoaded from './Components/iframeLoad/IframeLoaded';
 import ScrollTop from './Components/scrolltotop/ScrollTop';
+import Preloader from './Components/preloader/Preloader';
 
 export default function App() {
   const [search, setSearch] = useState('')
@@ -47,20 +48,30 @@ export default function App() {
     FilterShow()
   }, [search])
 
-  return (
-    <div className='w-full h-full bg-[#1E2122] flex flex-col'>
-      <ScrollTop />
-      <Header openPopup={openPopup} />
+  const [isLoad, setIsLoad] = useState(true);
 
-      <div className='flex justify-center items-center'>
-        <IframeLoaded iframeLoad={iframeLoad} />
-        <Popup closePopup={closePopup} iframeLink={iframeLink} popupOpen={popupOpen} />
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoad(false)
+    }, 3000)
+  }, [])
+
+  return(
+      <div className='w-full h-full bg-[#1E2122] flex flex-col'>
+        <ScrollTop />
+        <Header openPopup={openPopup} />
+
+        <div className='flex justify-center items-center'>
+          <IframeLoaded iframeLoad={iframeLoad} />
+          <Popup closePopup={closePopup} iframeLink={iframeLink} popupOpen={popupOpen} />
+        </div>
+
+        <main className='mx-20 pt-10'>
+          <Search openPopup={openPopup} filterMoviesContainer={filterMoviesContainer} filteredMovies={filteredMovies} handlechange={handlechange} search={search} />
+          <MovieArea openPopup={openPopup} Movies={Movies} />
+        </main>
+
+        {isLoad && <Preloader />}
       </div>
-
-      <main className='mx-20 pt-10'>
-        <Search openPopup={openPopup} filterMoviesContainer={filterMoviesContainer} filteredMovies={filteredMovies} handlechange={handlechange} search={search} />
-        <MovieArea openPopup={openPopup} Movies={Movies} />
-      </main>
-    </div>
-  )
+    )
 }
