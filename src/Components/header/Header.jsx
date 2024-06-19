@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { FaPlay } from "react-icons/fa";
 
@@ -6,6 +6,7 @@ import RandomMovie from '../random/RandomMovie';
 import SlideInfos from '../../assets/Slidedb/dbSlide'
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
+import ImageSkelet from '../imageSkelet/ImageSkelet';
 
 export default function Header({ openPopup }) {
     return (
@@ -19,11 +20,12 @@ export default function Header({ openPopup }) {
                     <span className='text-white absolute text-xs hidden group-hover:flex'>filme aleatório</span>
                 </div>
             </div>
-            
-            <Slide arrows={false} pauseOnHover={true}>
-                {SlideInfos.map((slide, index) => (
-                    <header key={slide.id} style={{ 'backgroundImage': `url(${slide.imagem})` }} className='w-full h-[450px] bg-cover bg-center from-black sm:h-[570px] mt-8 relative'>
 
+            <div className='bg-zinc-800 w-full h-[450px] absolute mt-8 animate-iframe-Fade'></div>
+
+            <Slide arrows={false} pauseOnHover={true}>
+                {SlideInfos.map((slide) => (
+                    <header key={slide.id} style={{ 'backgroundImage': `url(${slide.imagem})` }} className='w-full h-[450px] bg-cover bg-center from-black sm:h-[570px] mt-8 relative'>
                         <div className='flex items-center justify-around w-full sm:flex-col'>
                             <div >
                                 <h1 className='text-white text-5xl font-bold mx-8 mt-20 '>{slide.nome}</h1>
@@ -40,7 +42,7 @@ export default function Header({ openPopup }) {
                             </div>
 
                             <div className='relative cursor-pointer hover:scale-[.9] transition-all flex justify-center items-center w-80 mt-20' onClick={() => openPopup(`${slide.link}`)}>
-                                <img className=' rounded-xl' src={slide.preview} alt={slide.nome} />
+                                <ImageSkelet src={slide.preview} alt={slide.nome} hash={slide.previewHash} width={320} height={128} />
                                 <FaPlay className='absolute shadow-xl animate-pulse' color='orange' size={30} />
                             </div>
                         </div>

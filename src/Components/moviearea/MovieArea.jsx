@@ -12,7 +12,7 @@ export default function MovieArea({openPopup, Movies}) {
         <div className='flex flex-wrap gap-2 justify-center items-center py-10 w-full overflow-hidden'>
           {Movies.map((movie) => (
             <div key={movie.id} onClick={() => openPopup(movie.link)}>
-              <ImageSkelet src={movie.imagem} alt={movie.nome} hash={movie.hash} />
+              <ImageSkelet src={movie.imagem} alt={movie.nome} hash={movie.hash} width={200} height={265} />
             </div>
           ))}
         </div>

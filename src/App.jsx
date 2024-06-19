@@ -47,18 +47,10 @@ export default function App() {
 
   useEffect(() => {
     FilterShow()
-
-    setTimeout(() => {
-      setLoading(false)
-    }, 4000)
   }, [search])
 
   return (
     <div className='w-full h-full bg-[#1E2122] flex flex-col'>
-      {loading && (
-        <span className='text-white flex justify-center items-center bg-[#1E2122] w-full h-screen font-bold text-2xl drop-shadow-xl animate-pulse'>Cinezin</span>
-      )}
-
       <ScrollTop />
       <Header openPopup={openPopup} />
 
