@@ -43,8 +43,6 @@ export default function App() {
     }
   }
 
-  const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     FilterShow()
   }, [search])
