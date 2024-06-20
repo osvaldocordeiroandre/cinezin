@@ -57,6 +57,9 @@ export default function Header({ openPopup }) {
                     <strong>Duração:</strong> {slide.Duration}
                   </span>
                 </div>
+                <div>
+                  <button className="text-white text-xl mx-14 mt-5 bg-orange-500 p-2 rounded-xl hover:bg-orange-600 duration-200 transition-all" onClick={() => openPopup(`${slide.link}`)}>Assistir</button>
+                </div>
               </div>
 
               <div
