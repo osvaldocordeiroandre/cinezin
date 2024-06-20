@@ -25,7 +25,7 @@ export default function Header({ openPopup }) {
 
             <Slide arrows={false} pauseOnHover={true}>
                 {SlideInfos.map((slide) => (
-                    <header key={slide.id} style={{ 'backgroundImage': `url(${slide.imagem})` }} className='w-full h-[450px] bg-cover bg-center from-black sm:h-[570px] mt-8 relative'>
+                    <header key={slide.id} style={{ backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)), url(${slide.imagem})`  }} className='w-full h-[450px] bg-cover bg-center from-black sm:h-[570px] mt-8'>
                         <div className='flex items-center justify-around w-full sm:flex-col'>
                             <div >
                                 <h1 className='text-white text-5xl font-bold mx-8 mt-20 '>{slide.nome}</h1>
