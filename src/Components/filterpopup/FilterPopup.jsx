@@ -9,8 +9,7 @@ export default function FilterPopup({
 }) {
   return (
     <>
-      {filter && (
-        <div className="bg-[#1E2122] w-full h-full fixed top-0 left-0 z-10 flex flex-col justify-center items-center">
+        <div className={`bg-[#1E2122] w-full h-full fixed top-0 left-0 z-10 flex flex-col justify-center items-center ${filter ? 'translate-y-0' : 'translate-y-full'} duration-700 transition-all`}>
           <div className="fixed top-[16%] bg-zinc-800 w-[96vw] h-[70vh] p-4 rounded-md  overflow-y-auto">
             <div className="flex justify-between items-center">
               <div className="pb-3 cd:w-[500px]  space-y-2 space-x-1">
@@ -44,7 +43,6 @@ export default function FilterPopup({
             </div>
           </div>
         </div>
-      )}
     </>
   );
 }
