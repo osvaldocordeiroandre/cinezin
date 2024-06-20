@@ -29,10 +29,15 @@ export default {
         '0%': {opacity: '1'},
         '50%': {opacity: '.8'},
         '100%': {opacity: '1'},
-      }
+      },
+       TranslateY: {
+          '0%': {transform: 'translateY(20%)', opacity: '0'},
+          '100%': {transform: 'translateY(0)', opacity: '1'}
+       }
       },
       animation: {
-        'iframe-Fade': 'iframeFade 2s ease-in-out infinite'
+        'iframe-Fade': 'iframeFade 2s ease-in-out infinite',
+        'Tranform-Y': 'TranslateY .5s ease-in-out'
       }
     },
   },
