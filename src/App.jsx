@@ -30,7 +30,7 @@ export default function App() {
     setSearch("");
     setFiltter(false);
     setSelectGenero("");
-    setFilterBarOpen(false)
+    setFilterBarOpen(false);
   };
 
   const closePopup = () => {
@@ -44,14 +44,14 @@ export default function App() {
   );
 
   const [selectGenero, setSelectGenero] = useState("");
-  const [filterBarOpen, setFilterBarOpen] = useState(false)
+  const [filterBarOpen, setFilterBarOpen] = useState(false);
 
   const selected = (Genero) => {
-    setSelectGenero(Genero)
-    setFilterBarOpen(true)
-  }
+    setSelectGenero(Genero);
+    setFilterBarOpen(true);
+  };
 
-  console.log(selectGenero)
+  console.log(selectGenero);
 
   const filterMovies = Movies.filter((film) =>
     film.Genero.includes(selectGenero)
@@ -121,7 +121,13 @@ export default function App() {
           handlechange={handlechange}
           search={search}
         />
-        <FilterBar setFilterBarOpen={setFilterBarOpen}  filterBarOpen={filterBarOpen} selectGenero={selectGenero} filterMovies={filterMovies} openPopup={openPopup}/>
+        <FilterBar
+          setFilterBarOpen={setFilterBarOpen}
+          filterBarOpen={filterBarOpen}
+          selectGenero={selectGenero}
+          filterMovies={filterMovies}
+          openPopup={openPopup}
+        />
         <div className="flex flex-col justify-center items-center">
           <FilterPopup
             filter={filter}
