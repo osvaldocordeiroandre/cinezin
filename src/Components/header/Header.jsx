@@ -27,7 +27,7 @@ export default function Header({ openPopup }) {
 
       <div className="bg-zinc-800 w-full h-[450px] absolute mt-8 animate-iframe-Fade"></div>
 
-      <Slide arrows={false} pauseOnHover={true}>
+      <Slide pauseOnHover={true}>
         {SlideInfos.map((slide) => (
           <header
             key={slide.id}
