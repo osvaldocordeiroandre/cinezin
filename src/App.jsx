@@ -9,6 +9,7 @@ import IframeLoaded from "./Components/iframeLoad/IframeLoaded";
 import ScrollTop from "./Components/scrolltotop/ScrollTop";
 import Preloader from "./Components/preloader/Preloader";
 import FilterPopup from "./Components/filterpopup/FilterPopup";
+import FilterBar from "./Components/filterbar/FilterBar";
 
 export default function App() {
   const [search, setSearch] = useState("");
@@ -29,6 +30,7 @@ export default function App() {
     setSearch("");
     setFiltter(false);
     setSelectGenero("");
+    setFilterBarOpen(false)
   };
 
   const closePopup = () => {
@@ -42,6 +44,14 @@ export default function App() {
   );
 
   const [selectGenero, setSelectGenero] = useState("");
+  const [filterBarOpen, setFilterBarOpen] = useState(false)
+
+  const selected = (Genero) => {
+    setSelectGenero(Genero)
+    setFilterBarOpen(true)
+  }
+
+  console.log(selectGenero)
 
   const filterMovies = Movies.filter((film) =>
     film.Genero.includes(selectGenero)
@@ -70,16 +80,8 @@ export default function App() {
   const [filter, setFiltter] = useState(false);
 
   const handlePopup = () => {
-    setFiltter(true);
+    setFiltter(!filter);
   };
-
-  useEffect(() => {
-    if (filter) {
-      document.body.classList.add("overflow-hidden");
-    } else {
-      document.body.classList.remove("overflow-hidden");
-    }
-  }, [filter]);
 
   useEffect(() => {
     if (isLoad) {
@@ -88,6 +90,14 @@ export default function App() {
       document.body.classList.remove("overflow-hidden");
     }
   }, [isLoad]);
+
+  useEffect(() => {
+    if (filterBarOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+  }, [filterBarOpen]);
 
   return (
     <div className="w-full h-full bg-[#1E2122] flex flex-col">
@@ -111,13 +121,14 @@ export default function App() {
           handlechange={handlechange}
           search={search}
         />
+        <FilterBar setFilterBarOpen={setFilterBarOpen}  filterBarOpen={filterBarOpen} selectGenero={selectGenero} filterMovies={filterMovies} openPopup={openPopup}/>
         <div className="flex flex-col justify-center items-center">
           <FilterPopup
             filter={filter}
             filterMovies={filterMovies}
             setFiltter={setFiltter}
             openPopup={openPopup}
-            setSelectGenero={setSelectGenero}
+            selected={selected}
           />
         </div>
         <MovieArea

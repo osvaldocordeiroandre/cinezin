@@ -1,10 +1,5 @@
 const InfoButtons = [
   {
-    id: 1,
-    text: "Todos",
-    genefilter: "",
-  },
-  {
     id: 2,
     text: "Comédia",
     genefilter: "Comédia",

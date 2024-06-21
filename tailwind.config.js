@@ -7,6 +7,8 @@ export default {
   theme: {
     extend: {
       screens: {
+        'mp': {'max': '368px'},
+
         'cd': {'max': '995px'},
 
         '2xl': {'max': '1535px'},
