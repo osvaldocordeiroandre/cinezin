@@ -9,7 +9,7 @@ export default function Search({
   filterBarOpen
 }) {
   return (
-    <div className={`text-white ${filterBarOpen ? 'blur-sm' : 'blur-0'} duration-500 transition-all`}>
+    <div className={`text-white`}>
       <div>
         <div>
           <span className="text-2xl font-bold">Pesquisar</span>
@@ -32,7 +32,7 @@ export default function Search({
         />
 
         {filterMoviesContainer && (
-          <div className="bg-zinc-700 flex flex-wrap justify-center items-center gap-2 py-10 absolute w-full rounded-md z-30">
+          <div className="bg-zinc-700 flex flex-wrap justify-center items-center gap-2 py-10 absolute w-full rounded-md z-50">
             {filteredMovies.map((itemsMovie) => (
               <div
                 key={itemsMovie.id}

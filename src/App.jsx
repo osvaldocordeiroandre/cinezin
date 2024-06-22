@@ -77,27 +77,19 @@ export default function App() {
     }, 3000);
   }, []);
 
+  useEffect(() => {
+    if (isLoad || filterBarOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+  }, [isLoad, filterBarOpen]);
+
   const [filter, setFiltter] = useState(false);
 
   const handlePopup = () => {
     setFiltter(!filter);
   };
-
-  useEffect(() => {
-    if (isLoad) {
-      document.body.classList.add("overflow-hidden");
-    } else {
-      document.body.classList.remove("overflow-hidden");
-    }
-  }, [isLoad]);
-
-  useEffect(() => {
-    if (filterBarOpen) {
-      document.body.classList.add("overflow-hidden");
-    } else {
-      document.body.classList.remove("overflow-hidden");
-    }
-  }, [filterBarOpen]);
 
   return (
     <div className={`w-full h-full bg-[#1E2122] flex flex-col`}>
