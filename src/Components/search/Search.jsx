@@ -6,9 +6,10 @@ export default function Search({
   filteredMovies,
   search,
   handlechange,
+  filterBarOpen
 }) {
   return (
-    <div className="text-white">
+    <div className={`text-white ${filterBarOpen ? 'blur-sm' : 'blur-0'} duration-500 transition-all`}>
       <div>
         <div>
           <span className="text-2xl font-bold">Pesquisar</span>

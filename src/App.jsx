@@ -100,9 +100,9 @@ export default function App() {
   }, [filterBarOpen]);
 
   return (
-    <div className="w-full h-full bg-[#1E2122] flex flex-col">
+    <div className={`w-full h-full bg-[#1E2122] flex flex-col`}>
       <ScrollTop />
-      <Header openPopup={openPopup} />
+      <Header openPopup={openPopup} filterBarOpen={filterBarOpen} />
 
       <div className="flex justify-center items-center">
         <IframeLoaded iframeLoad={iframeLoad} />
@@ -120,6 +120,7 @@ export default function App() {
           filteredMovies={filteredMovies}
           handlechange={handlechange}
           search={search}
+          filterBarOpen={filterBarOpen}
         />
         <FilterBar
           setFilterBarOpen={setFilterBarOpen}
@@ -141,6 +142,7 @@ export default function App() {
           openPopup={openPopup}
           Movies={Movies}
           handlePopup={handlePopup}
+          filterBarOpen={filterBarOpen}
         />
       </main>
 
