@@ -14,7 +14,7 @@ export default function FilterBar({filterBarOpen, setFilterBarOpen, selectGenero
       </div>
       <div className="bg-white h-1 w-20 mt-2"></div>
 
-      <div className="grid grid-cols-4 mx-auto gap-2 w-[800px] pt-10 pb-60 cd:grid-cols-3 cd:w-[80%]">
+      <div className="grid grid-cols-4 mx-auto gap-2 w-[800px] pt-10 pb-96 cd:grid-cols-3 cd:w-[80%]">
         {filterMovies.map((movieGenre) => (
             <div key={movieGenre.id} onClick={() => openPopup(movieGenre.link)}>
                 <ImageSkelet src={movieGenre.imagem} alt={movieGenre.nome} hash={movieGenre.hash} width={200} height={265} />
