@@ -58,7 +58,16 @@ export default function Header({ openPopup }) {
                   </span>
                 </div>
                 <div>
-                  <button className="text-white text-xl mx-14 mt-5 bg-orange-500 p-2 rounded-xl hover:bg-orange-600 duration-200 transition-all" onClick={() => openPopup(`${slide.link}`)}>Assistir</button>
+                  <button
+                    className="text-white text-xl mx-14 mt-5 bg-orange-500 p-2 rounded-xl hover:bg-orange-600 duration-200 transition-all flex items-center gap-2"
+                    onClick={() => openPopup(`${slide.link}`)}
+                  >
+                    {" "}
+                    <div>
+                      <FaPlay />
+                    </div>{" "}
+                    Assistir
+                  </button>
                 </div>
               </div>
 
