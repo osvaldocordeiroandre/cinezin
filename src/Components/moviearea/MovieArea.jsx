@@ -2,9 +2,9 @@ import React from 'react'
 
 import ImageSkelet from '../imageSkelet/ImageSkelet';
 
-export default function MovieArea({openPopup, Movies, handlePopup, filterBarOpen}) {
+export default function MovieArea({openPopup, Movies, handlePopup}) {
   return (
-    <div className={`${filterBarOpen ? 'blur-sm' : 'blur-0'} duration-500 transition-all`}>
+    <div>
       <div className='text-white mt-10'>
         <div className='flex justify-between'>
           <span className='text-4xl font-light'>Recentes</span>

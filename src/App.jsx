@@ -60,6 +60,9 @@ export default function App() {
   const FilterShow = () => {
     if (search !== "" && filteredMovies.length > 0) {
       setFilterMoviesContainer(true);
+      setFiltter(false)
+      setFilterBarOpen(false)
+      
     } else {
       setFilterMoviesContainer(false);
     }
@@ -105,36 +108,40 @@ export default function App() {
         />
       </div>
 
-      <main className="mx-20 pt-10">
+      <FilterBar
+        setFilterBarOpen={setFilterBarOpen}
+        filterBarOpen={filterBarOpen}
+        selectGenero={selectGenero}
+        filterMovies={filterMovies}
+        openPopup={openPopup}
+      />
+      <div className="flex flex-col justify-center items-center">
+        <FilterPopup
+          filter={filter}
+          filterMovies={filterMovies}
+          setFiltter={setFiltter}
+          openPopup={openPopup}
+          selected={selected}
+        />
+      </div>
+
+      <main
+        className={`mx-20 pt-10 ${
+          filterBarOpen ? "blur-sm" : "blur-0"
+        } duration-500 transition-all`}
+      >
         <Search
           openPopup={openPopup}
           filterMoviesContainer={filterMoviesContainer}
           filteredMovies={filteredMovies}
           handlechange={handlechange}
           search={search}
-          filterBarOpen={filterBarOpen}
         />
-        <FilterBar
-          setFilterBarOpen={setFilterBarOpen}
-          filterBarOpen={filterBarOpen}
-          selectGenero={selectGenero}
-          filterMovies={filterMovies}
-          openPopup={openPopup}
-        />
-        <div className="flex flex-col justify-center items-center">
-          <FilterPopup
-            filter={filter}
-            filterMovies={filterMovies}
-            setFiltter={setFiltter}
-            openPopup={openPopup}
-            selected={selected}
-          />
-        </div>
+
         <MovieArea
           openPopup={openPopup}
           Movies={Movies}
           handlePopup={handlePopup}
-          filterBarOpen={filterBarOpen}
         />
       </main>
 

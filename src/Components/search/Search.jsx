@@ -6,7 +6,6 @@ export default function Search({
   filteredMovies,
   search,
   handlechange,
-  filterBarOpen
 }) {
   return (
     <div className={`text-white`}>
