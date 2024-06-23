@@ -27,12 +27,12 @@ export default function Header({ openPopup, filterBarOpen }) {
 
       <div className="bg-zinc-800 w-full h-[450px] absolute mt-8 animate-iframe-Fade"></div>
 
-      <Slide pauseOnHover={true}>
+      <Slide pauseOnHover={true} arrows={false}>
         {SlideInfos.map((slide) => (
           <header
             key={slide.id}
             style={{
-              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)), url(${slide.imagem})`,
+              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(30,33,34)), url(${slide.imagem})`,
             }}
             className="w-full h-[450px] bg-cover bg-center from-black sm:h-[570px] mt-8"
           >
