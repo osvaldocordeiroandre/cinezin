@@ -168,14 +168,6 @@ const caps = [
         Genero: 'Infantil/Ficção científica'
     },
     {
-        id: '6',
-        nome: 'Super Mario Bros',
-        imagem: 'https://i.ibb.co/fpWgXV4/Super-Mario-Bros.png',
-        link: 'https://drive.google.com/file/d/1AATQtzjNFGdqKNckGv1jVcVyr8w34bqp/preview',
-        hash: 'LHJ?H#_OGJ]~9jbMJGW=0wTLvjO@',
-        Genero: 'Infantil/Aventura'
-    },
-    {
         id: '7',
         nome: 'Querido John',
         imagem: 'https://i.ibb.co/z29VhVj/Querido-John.jpg',
@@ -256,14 +248,6 @@ const caps = [
         Genero: 'Infantil/Terror'
     },
     {
-        id: '17',
-        nome: 'Jogos vorazes',
-        imagem: 'https://i.ibb.co/hZy7wd3/Jogos-Vorazes.jpg',
-        link: 'https://drive.google.com/file/d/1_jCcnmGZb1TWBbq4NPQzFCMgMFNP9cYz/preview',
-        hash: 'LSFh6J?aRkRj~B%MxFWAXSX9jZjY',
-        Genero: 'Ação/Aventura'
-    },
-    {
         id: '18',
         nome: 'Perdido em Marte',
         imagem: 'https://i.ibb.co/rvVXGtr/Perdido-em-Marte.jpg',
@@ -294,14 +278,6 @@ const caps = [
         link: 'https://drive.google.com/file/d/1JN91DaGm9ktZmNY6FZAFwvFgdG-60fDK/preview',
         hash: 'LUGb-=%MpfM_XSxuRjRj-VozD$kD',
         Genero: 'Infantil/Comédia'
-    },
-    {
-        id: '22',
-        nome: 'Megamind vs. the Doom Syndicate',
-        imagem: 'https://i.ibb.co/kK5CFMj/Megamind-vs-the-Doom-Syndicate.jpg',
-        link: 'https://drive.google.com/file/d/1JsGKdzophr9_fCm3nKYvNKOUhwvXWs96/preview',
-        hash: 'LlC*COofI[a#PEj]kCWBnOjbROax',
-        Genero: 'Infantil'
     },
 ]
 
