@@ -31,12 +31,15 @@ export default function App() {
     setFiltter(false);
     setSelectGenero("");
     setFilterBarOpen(false);
+    setEpisodiosOpen(true)
   };
 
   const closePopup = () => {
     setPopupOpen(false);
     setIframeLink("");
     setIframeLoad(false);
+    setOpenEpisode(false)
+    setEpisodiosOpen(false)
   };
 
   const filteredMovies = Movies.filter((film) =>
@@ -81,18 +84,21 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    if (isLoad || filterBarOpen) {
+    if (isLoad || filterBarOpen || popupOpen) {
       document.body.classList.add("overflow-hidden");
     } else {
       document.body.classList.remove("overflow-hidden");
     }
-  }, [isLoad, filterBarOpen]);
+  }, [isLoad, filterBarOpen, popupOpen]);
 
   const [filter, setFiltter] = useState(false);
 
   const handlePopup = () => {
     setFiltter(!filter);
   };
+
+  const [openEpisode, setOpenEpisode] = useState(false);
+  const [episodiosOpen, setEpisodiosOpen] = useState(false)
 
   return (
     <div className={`w-full h-full bg-[#1E2122] flex flex-col`}>
@@ -105,6 +111,11 @@ export default function App() {
           closePopup={closePopup}
           iframeLink={iframeLink}
           popupOpen={popupOpen}
+          setIframeLink={setIframeLink}
+          setOpenEpisode={setOpenEpisode}
+          openEpisode={openEpisode}
+          setEpisodiosOpen={setEpisodiosOpen}
+          episodiosOpen={episodiosOpen}
         />
       </div>
 
