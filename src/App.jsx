@@ -38,7 +38,7 @@ export default function App() {
     setIframeLink("");
     setIframeLoad(false);
     setOpenEpisode(false);
-    setEpSelect("");
+    setEpSelect(1);
   };
 
   const filteredMovies = Movies.filter((film) =>
@@ -98,7 +98,7 @@ export default function App() {
   const [openEpisode, setOpenEpisode] = useState(false);
 
   const [selectMedia, setSelectMedia] = useState("");
-  const [epSelect, setEpSelect] = useState("");
+  const [epSelect, setEpSelect] = useState(1);
 
   const handleMedia = (Media) => {
     setSelectMedia(Media);
