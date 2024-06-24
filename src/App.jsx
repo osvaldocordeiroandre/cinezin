@@ -100,6 +100,12 @@ export default function App() {
   const [openEpisode, setOpenEpisode] = useState(false);
   const [episodiosOpen, setEpisodiosOpen] = useState(false)
 
+  const [selectMedia, setSelectMedia] = useState('')
+
+const handleMedia = (Media) => {
+  setSelectMedia(Media)
+}
+
   return (
     <div className={`w-full h-full bg-[#1E2122] flex flex-col`}>
       <ScrollTop />
@@ -116,6 +122,7 @@ export default function App() {
           openEpisode={openEpisode}
           setEpisodiosOpen={setEpisodiosOpen}
           episodiosOpen={episodiosOpen}
+          selectMedia={selectMedia}
         />
       </div>
 
@@ -153,6 +160,7 @@ export default function App() {
           openPopup={openPopup}
           Movies={Movies}
           handlePopup={handlePopup}
+          handleMedia={handleMedia}
         />
       </main>
 

@@ -9,6 +9,7 @@ export default function Popup({
   openEpisode,
   setEpisodiosOpen,
   episodiosOpen,
+  selectMedia,
 }) {
   return (
     <>
@@ -35,30 +36,36 @@ export default function Popup({
           X
         </button>
         <div className="text-white absolute w-full text-right mt-4">
-          <button
-            className={`bg-zinc-700 p-1 mr-1 hover:bg-zinc-600 ${episodiosOpen ? 'visible' : 'invisible'}`}
-            onClick={() => setEpisodiosOpen(false)}
-          >
-            X
-          </button>
+          {selectMedia === "Tv" && (
+            <>
+              <button
+                className={`bg-zinc-700 p-1 mr-1 hover:bg-zinc-600 ${
+                  episodiosOpen ? "visible" : "invisible"
+                }`}
+                onClick={() => setEpisodiosOpen(false)}
+              >
+                X
+              </button>
 
-          <button
-            onClick={() => setOpenEpisode(!openEpisode)}
-            className={`bg-zinc-800 p-1 rounded-md hover:bg-zinc-700 text-lg ${
-              episodiosOpen ? "visible" : "invisible"
-            }`}
-          >
-            Episódios
-          </button>
+              <button
+                onClick={() => setOpenEpisode(!openEpisode)}
+                className={`bg-zinc-800 p-1 rounded-md hover:bg-zinc-700 text-lg ${
+                  episodiosOpen ? "visible" : "invisible"
+                }`}
+              >
+                Episódios
+              </button>
+            </>
+          )}
 
           <div
             className={`bg-zinc-800 w-[150px] h-[170px] overflow-auto  p-2 rounded-md absolute right-0 top-[120px] space-y-2 ${
               openEpisode ? "-translate-y-[300px]" : "translate-y-[40%]"
             } ${openEpisode ? "visible" : "invisible"} ${
               openEpisode ? "opacity-1" : "opacity-0"
+            } ${episodiosOpen ? "-translate-y-[300px]" : "translate-y-[40%]"} ${
+              episodiosOpen ? "visible" : "invisible"
             } ${
-              episodiosOpen ? "-translate-y-[300px]" : "translate-y-[40%]"
-            } ${episodiosOpen ? "visible" : "invisible"} ${
               episodiosOpen ? "opacity-1" : "opacity-0"
             } duration-700 transition-all`}
           >
