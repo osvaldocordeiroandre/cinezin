@@ -10,7 +10,6 @@ const caps = [
       },
       {
         id: 2,
-        type: 2,
         link: "https://drive.google.com/file/d/133kqLVluwb_GwN49HmZTOr-FHA8b12vh/preview",
         Ep: 2,
       },
