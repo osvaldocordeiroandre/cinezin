@@ -162,6 +162,7 @@ export default function App() {
           filteredMovies={filteredMovies}
           handlechange={handlechange}
           search={search}
+          handleMedia={handleMedia}
         />
 
         <MovieArea

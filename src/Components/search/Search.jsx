@@ -6,6 +6,7 @@ export default function Search({
   filteredMovies,
   search,
   handlechange,
+  handleMedia
 }) {
   return (
     <div className={`text-white`}>
@@ -35,7 +36,10 @@ export default function Search({
             {filteredMovies.map((itemsMovie) => (
               <div
                 key={itemsMovie.id}
-                onClick={() => openPopup(itemsMovie.video_url)}
+                onClick={() => {
+                  openPopup(itemsMovie.video_url);
+                  handleMedia(itemsMovie.type)
+                }}
               >
                 <img
                   className="rounded-md cursor-pointer hover:scale-[1.1] transition-transform"
