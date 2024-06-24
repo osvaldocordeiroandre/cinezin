@@ -38,7 +38,6 @@ export default function App() {
     setIframeLink("");
     setIframeLoad(false);
     setOpenEpisode(false);
-    setEpSelect(1);
   };
 
   const filteredMovies = Movies.filter((film) =>
