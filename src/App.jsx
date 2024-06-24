@@ -31,15 +31,13 @@ export default function App() {
     setFiltter(false);
     setSelectGenero("");
     setFilterBarOpen(false);
-    setEpisodiosOpen(true)
   };
 
   const closePopup = () => {
     setPopupOpen(false);
     setIframeLink("");
     setIframeLoad(false);
-    setOpenEpisode(false)
-    setEpisodiosOpen(false)
+    setOpenEpisode(false);
   };
 
   const filteredMovies = Movies.filter((film) =>
@@ -63,9 +61,8 @@ export default function App() {
   const FilterShow = () => {
     if (search !== "" && filteredMovies.length > 0) {
       setFilterMoviesContainer(true);
-      setFiltter(false)
-      setFilterBarOpen(false)
-      
+      setFiltter(false);
+      setFilterBarOpen(false);
     } else {
       setFilterMoviesContainer(false);
     }
@@ -98,13 +95,12 @@ export default function App() {
   };
 
   const [openEpisode, setOpenEpisode] = useState(false);
-  const [episodiosOpen, setEpisodiosOpen] = useState(false)
 
-  const [selectMedia, setSelectMedia] = useState('')
+  const [selectMedia, setSelectMedia] = useState("");
 
-const handleMedia = (Media) => {
-  setSelectMedia(Media)
-}
+  const handleMedia = (Media) => {
+    setSelectMedia(Media);
+  };
 
   return (
     <div className={`w-full h-full bg-[#1E2122] flex flex-col`}>
@@ -120,8 +116,6 @@ const handleMedia = (Media) => {
           setIframeLink={setIframeLink}
           setOpenEpisode={setOpenEpisode}
           openEpisode={openEpisode}
-          setEpisodiosOpen={setEpisodiosOpen}
-          episodiosOpen={episodiosOpen}
           selectMedia={selectMedia}
         />
       </div>
