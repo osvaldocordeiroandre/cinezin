@@ -8,6 +8,8 @@ export default function Popup({
   setOpenEpisode,
   openEpisode,
   selectMedia,
+  handleEpisode,
+  epSelect,
 }) {
   return (
     <>
@@ -55,8 +57,13 @@ export default function Popup({
             {Movies[0].episodes.map((episode) => (
               <div key={episode.id}>
                 <button
-                  onClick={() => setIframeLink(episode.link)}
-                  className="hover:bg-zinc-700 p-1 rounded-md w-full"
+                  onClick={() => {
+                    setIframeLink(episode.link);
+                    handleEpisode(episode.Ep);
+                  }}
+                  className={`hover:bg-zinc-700 p-1 rounded-md w-full duration-100 transition-all ${
+                    episode.Ep === epSelect ? "bg-zinc-700" : null
+                  }`}
                 >
                   Episódio: {episode.Ep}
                 </button>

@@ -97,10 +97,15 @@ export default function App() {
   const [openEpisode, setOpenEpisode] = useState(false);
 
   const [selectMedia, setSelectMedia] = useState("");
+  const [epSelect, setEpSelect] = useState('');
 
   const handleMedia = (Media) => {
     setSelectMedia(Media);
   };
+
+  const handleEpisode = (Ep) => {
+    setEpSelect(Ep)
+  }
 
   return (
     <div className={`w-full h-full bg-[#1E2122] flex flex-col`}>
@@ -117,6 +122,8 @@ export default function App() {
           setOpenEpisode={setOpenEpisode}
           openEpisode={openEpisode}
           selectMedia={selectMedia}
+          handleEpisode={handleEpisode}
+          epSelect={epSelect}
         />
       </div>
 
