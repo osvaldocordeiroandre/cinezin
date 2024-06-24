@@ -97,7 +97,14 @@ export default function App() {
   const [openEpisode, setOpenEpisode] = useState(false);
 
   const [selectMedia, setSelectMedia] = useState("");
-  const [epSelect, setEpSelect] = useState(1);
+  const [epSelect, setEpSelect] = useState(() => {
+    const saveEpSelect = localStorage.getItem('epSelect');
+    return saveEpSelect ? JSON.parse(saveEpSelect) : 1;
+  });
+
+  useEffect(() => {
+    localStorage.setItem('epSelect', JSON.stringify(epSelect));
+  }, [epSelect]);
 
   const handleMedia = (Media) => {
     setSelectMedia(Media);
