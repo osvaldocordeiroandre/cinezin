@@ -10,7 +10,11 @@ import ImageSkelet from "../imageSkelet/ImageSkelet";
 
 export default function Header({ openPopup, filterBarOpen }) {
   return (
-    <div className={`${filterBarOpen ? 'blur-sm' : 'blur-0'} duration-500 transition-all`}>
+    <div
+      className={`${
+        filterBarOpen ? "blur-sm" : "blur-0"
+      } duration-500 transition-all`}
+    >
       <div className="flex items-center justify-between mx-8 pt-8 bg-transparent">
         <div>
           <h1 className="text-white font-bold text-2xl drop-shadow-xl cursor-pointer">

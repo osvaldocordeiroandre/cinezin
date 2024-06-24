@@ -35,12 +35,12 @@ export default function Search({
             {filteredMovies.map((itemsMovie) => (
               <div
                 key={itemsMovie.id}
-                onClick={() => openPopup(itemsMovie.link)}
+                onClick={() => openPopup(itemsMovie.video_url)}
               >
                 <img
                   className="rounded-md cursor-pointer hover:scale-[1.1] transition-transform"
-                  src={itemsMovie.imagem}
-                  alt={itemsMovie.nome}
+                  src={itemsMovie.image_url}
+                  alt={itemsMovie.title}
                 />
               </div>
             ))}

@@ -38,10 +38,11 @@ export default function App() {
     setIframeLink("");
     setIframeLoad(false);
     setOpenEpisode(false);
+    setEpSelect("");
   };
 
   const filteredMovies = Movies.filter((film) =>
-    film.nome.toLowerCase().includes(search.toLowerCase())
+    film.title.toLowerCase().includes(search.toLowerCase())
   );
 
   const [selectGenero, setSelectGenero] = useState("");
@@ -55,7 +56,7 @@ export default function App() {
   console.log(selectGenero);
 
   const filterMovies = Movies.filter((film) =>
-    film.Genero.includes(selectGenero)
+    film.genre.includes(selectGenero)
   );
 
   const FilterShow = () => {
@@ -97,15 +98,15 @@ export default function App() {
   const [openEpisode, setOpenEpisode] = useState(false);
 
   const [selectMedia, setSelectMedia] = useState("");
-  const [epSelect, setEpSelect] = useState('');
+  const [epSelect, setEpSelect] = useState("");
 
   const handleMedia = (Media) => {
     setSelectMedia(Media);
   };
 
   const handleEpisode = (Ep) => {
-    setEpSelect(Ep)
-  }
+    setEpSelect(Ep);
+  };
 
   return (
     <div className={`w-full h-full bg-[#1E2122] flex flex-col`}>

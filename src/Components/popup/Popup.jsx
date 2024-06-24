@@ -36,7 +36,7 @@ export default function Popup({
           X
         </button>
         <div className="text-white absolute w-full text-right mt-4">
-          {selectMedia === "Tv" && (
+          {selectMedia === "TV" && (
             <>
               <button
                 onClick={() => setOpenEpisode(!openEpisode)}
@@ -58,14 +58,14 @@ export default function Popup({
               <div key={episode.id}>
                 <button
                   onClick={() => {
-                    setIframeLink(episode.link);
-                    handleEpisode(episode.Ep);
+                    setIframeLink(episode.video_url);
+                    handleEpisode(episode.episode_number);
                   }}
                   className={`hover:bg-zinc-700 p-1 rounded-md w-full duration-100 transition-all ${
-                    episode.Ep === epSelect ? "bg-zinc-700" : null
+                    episode.episode_number === epSelect ? "bg-zinc-700" : null
                   }`}
                 >
-                  Episódio: {episode.Ep}
+                  Episódio: {episode.episode_number}
                 </button>
               </div>
             ))}
