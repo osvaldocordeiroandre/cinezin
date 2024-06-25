@@ -11,7 +11,7 @@ export default function FilterBar({
   return (
     <div
       className={`bg-[#1E2122] w-full h-[80%] fixed bottom-0 left-0  z-50 ${
-        filterBarOpen ? "translate-y-[30%]" : "translate-y-full"
+        filterBarOpen ? "translate-y-[10%]" : "translate-y-full"
       } duration-700 transition-all overflow-y-auto ${
         filterBarOpen ? "visible" : "invisible"
       }`}
@@ -29,7 +29,7 @@ export default function FilterBar({
       </div>
       <div className="bg-white h-1 w-20 mt-2"></div>
 
-      <div className="grid grid-cols-4 mx-auto gap-2 w-[800px] pt-10 pb-96 cd:grid-cols-3 cd:w-[80%]">
+      <div className="grid grid-cols-4 mx-auto gap-2 w-[800px] pt-10 pb-20 cd:grid-cols-3 cd:w-[80%]">
         {filterMovies.map((movieGenre) => (
           <div
             key={movieGenre.id}

@@ -54,6 +54,11 @@ const InfoButtons = [
     text: "Terror",
     genefilter: "Terror",
   },
+  {
+    id: 13,
+    text: "Romance",
+    genefilter: "Romance",
+  },
 ];
 
 export default InfoButtons;
