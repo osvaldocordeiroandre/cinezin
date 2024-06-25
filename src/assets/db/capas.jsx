@@ -188,6 +188,16 @@ const caps = [
     hash: "LDBpt*Q:ISIA03t*WByA}~Vxt1a5",
   },
   {
+    id: "41",
+    title: "Barbie: a Fashion Fairytale",
+    image_url: "https://i.ibb.co/6wzMBmc/Barbie-a-Fashion-Fairytale.jpg",
+    video_url:
+      "https://drive.google.com/file/d/1THzc-dWT5cYnCmoGmO2yfjzKpBuQtulz/preview",
+    hash: "LBK+]QIo2zWE04?a@urr1O+^-gSg",
+    genre: "Infantil/Aventura",
+    type: "Movie",
+  },
+  {
     id: "38",
     title: "Mary e Max - Uma Amizade Diferente",
     image_url: "https://i.ibb.co/tLzDPth/Mary-e-Max-Uma-Amizade-Diferente.jpg",
