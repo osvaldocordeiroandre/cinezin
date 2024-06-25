@@ -132,6 +132,7 @@ export default function App() {
         selectGenero={selectGenero}
         filterMovies={filterMovies}
         openPopup={openPopup}
+        setSelectAnime={setSelectAnime}
       />
       <div className="flex flex-col justify-center items-center">
         <FilterPopup

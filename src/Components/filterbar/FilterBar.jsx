@@ -7,6 +7,7 @@ export default function FilterBar({
   selectGenero,
   filterMovies,
   openPopup,
+  setSelectAnime
 }) {
   return (
     <div
@@ -33,7 +34,11 @@ export default function FilterBar({
         {filterMovies.map((movieGenre) => (
           <div
             key={movieGenre.id}
-            onClick={() => openPopup(movieGenre.video_url)}
+            onClick={() => {
+              openPopup(movieGenre.video_url);
+              setSelectAnime(movieGenre);
+              set
+            }}
           >
             <ImageSkelet
               src={movieGenre.image_url}
