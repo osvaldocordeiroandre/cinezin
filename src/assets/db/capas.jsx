@@ -1,12 +1,95 @@
 const caps = [
   {
+    id: 40,
+    title: "Spy x Family Temporada 2",
+    image_url: "https://i.ibb.co/PmmRZG8/Spy-Family-Temporada-2.jpg",
+    video_url:
+      "https://drive.google.com/file/d/1i4qwTbEYIfAkGV2T6qNh9NYBGggFY2Qg/preview",
+
+    genre: "Ação/Comédia",
+    type: "TV",
+    episodes: [
+      {
+        id: 1,
+        episode_number: 1,
+        title: "Episódio 1",
+        video_url: "https://drive.google.com/file/d/1i4qwTbEYIfAkGV2T6qNh9NYBGggFY2Qg/preview",
+      },
+      {
+        id: 2,
+        episode_number: 2,
+        title: "Episódio 2",
+        video_url: "https://drive.google.com/file/d/1g6mkaXkG4qvngILCWgQAQM-kab3RjjeO/preview",
+      },
+      {
+        id: 3,
+        episode_number: 3,
+        title: "Episódio 3",
+        video_url: "https://drive.google.com/file/d/121HNE9ynTfDTQokvENWpUrAbkTNFA4KA/preview",
+      },
+      {
+        id: 4,
+        episode_number: 4,
+        title: "Episódio 4",
+        video_url: "https://drive.google.com/file/d/1oj2iJCSjZtakoM_W2s8wehke-L2lP6V0/preview",
+      },
+      {
+        id: 5,
+        episode_number: 5,
+        title: "Episódio 5",
+        video_url: "https://drive.google.com/file/d/16s1kzrvdx5rx2ty7W4sZgnd12bkNJzUu/preview",
+      },
+      {
+        id: 6,
+        episode_number: 6,
+        title: "Episódio 6",
+        video_url: "https://drive.google.com/file/d/1E0m1p05xOSAwCrCznpY_MiCmRB5wdamT/preview",
+      },
+      {
+        id: 7,
+        episode_number: 7,
+        title: "Episódio 7",
+        video_url: "https://drive.google.com/file/d/1djLvkc8XTAI3S49xoc8U8aDc2AMQq8Vf/preview",
+      },
+      {
+        id: 8,
+        episode_number: 8,
+        title: "Episódio 8",
+        video_url: "https://drive.google.com/file/d/1vP9hNZ4O1OsN2a-NtJ9FONMgtojlxc0u/preview",
+      },
+      {
+        id: 9,
+        episode_number: 9,
+        title: "Episódio 9",
+        video_url: "https://drive.google.com/file/d/13YE4WqD8mylQY40QVtrATtdceEZkcN_3/preview",
+      },
+      {
+        id: 10,
+        episode_number: 10,
+        title: "Episódio 10",
+        video_url: "https://drive.google.com/file/d/1LPYp_ZsbRkbkrdufVF-iqtcq2KjMZuzY/preview",
+      },
+      {
+        id: 11,
+        episode_number: 11,
+        title: "Episódio 11",
+        video_url: "https://drive.google.com/file/d/1MqhFx7EscsJJ3o_kR3-zKwJ-quCQ5S59/preview",
+      },
+      {
+        id: 12,
+        episode_number: 12,
+        title: "Episódio 12",
+        video_url: "https://drive.google.com/file/d/1P-QPkQYJDRU0MGIRG_eUanHVGOdoaZY0/preview",
+      },
+    ],
+    hash: "LRMHAHo{PBxuCPtRJ-ww~WoMT0V@",
+  },
+  {
     id: 39,
     title: "Kimi wa Hōkago Insomunia",
     image_url: "https://i.ibb.co/t2r8tbx/Kimi-wa-H-kago-Insomunia.jpg",
     video_url:
       "https://drive.google.com/file/d/1HpsVwPz_fP4B0A_3VydhzZaOX8p6uQbf/preview",
-    description:
-      "Tudo começou com a morte de um dos membros do Clube de Astronomia. A partir disso, o suposto fantasma do clube ganhou vida. O rabugento e insone Ganta Nakami se depara com o moderadamente rebelde, mas tranquilo Isaki Magari, no observatório abandonado do Clube de Astronomia. Magari é acordada e tenta escapar de cena, apenas para ter uma porta quebrada impedindo isso, forçando os dois a entrar. Os dois formam uma amizade improvável, levando-os a usar o observatório como um espaço seguro para interagirem. Kimi wa Houkago Insomnia segue os insones Nakami e Magari no observatório estrelado enquanto eles se ajudam a lidar com a insônia e os efeitos duradouros que ela tem na vida estudantil.",
     genre: "Romance",
     type: "TV",
     episodes: [
