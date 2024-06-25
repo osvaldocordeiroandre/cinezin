@@ -96,23 +96,8 @@ export default function App() {
 
   const [openEpisode, setOpenEpisode] = useState(false);
 
-  const [selectMedia, setSelectMedia] = useState("");
-  const [epSelect, setEpSelect] = useState(() => {
-    const saveEpSelect = localStorage.getItem('epSelect');
-    return saveEpSelect ? JSON.parse(saveEpSelect) : 1;
-  });
-
-  useEffect(() => {
-    localStorage.setItem('epSelect', JSON.stringify(epSelect));
-  }, [epSelect]);
-
-  const handleMedia = (Media) => {
-    setSelectMedia(Media);
-  };
-
-  const handleEpisode = (Ep) => {
-    setEpSelect(Ep);
-  };
+  const [selectAnime, setSelectAnime] = useState([]);
+  const [selectEp, setSelectEp] = useState(1)
 
   return (
     <div className={`w-full h-full bg-[#1E2122] flex flex-col`}>
@@ -128,9 +113,9 @@ export default function App() {
           setIframeLink={setIframeLink}
           setOpenEpisode={setOpenEpisode}
           openEpisode={openEpisode}
-          selectMedia={selectMedia}
-          handleEpisode={handleEpisode}
-          epSelect={epSelect}
+          selectAnime={selectAnime}
+          setSelectEp={setSelectEp}
+          selectEp={selectEp}
         />
       </div>
 
@@ -162,14 +147,14 @@ export default function App() {
           filteredMovies={filteredMovies}
           handlechange={handlechange}
           search={search}
-          handleMedia={handleMedia}
         />
 
         <MovieArea
           openPopup={openPopup}
           Movies={Movies}
           handlePopup={handlePopup}
-          handleMedia={handleMedia}
+          setSelectAnime={setSelectAnime}
+          setSelectEp={setSelectEp}
         />
       </main>
 

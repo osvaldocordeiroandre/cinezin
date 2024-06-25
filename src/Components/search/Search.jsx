@@ -6,7 +6,6 @@ export default function Search({
   filteredMovies,
   search,
   handlechange,
-  handleMedia
 }) {
   return (
     <div className={`text-white`}>
@@ -38,7 +37,6 @@ export default function Search({
                 key={itemsMovie.id}
                 onClick={() => {
                   openPopup(itemsMovie.video_url);
-                  handleMedia(itemsMovie.type)
                 }}
               >
                 <img
