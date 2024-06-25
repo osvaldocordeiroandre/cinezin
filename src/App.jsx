@@ -97,7 +97,14 @@ export default function App() {
   const [openEpisode, setOpenEpisode] = useState(false);
 
   const [selectAnime, setSelectAnime] = useState([]);
-  const [selectEp, setSelectEp] = useState(1)
+  const [selectEp, setSelectEp] = useState(() => {
+    const saveSelectEp = localStorage.getItem('selectEp');
+    return saveSelectEp ? JSON.parse(saveSelectEp) : 1
+  })
+
+  useEffect(() => {
+    localStorage.setItem('selectEp', JSON.stringify(selectEp));
+  }, [selectEp])
 
   return (
     <div className={`w-full h-full bg-[#1E2122] flex flex-col`}>
@@ -147,6 +154,7 @@ export default function App() {
           filteredMovies={filteredMovies}
           handlechange={handlechange}
           search={search}
+          setSelectAnime={setSelectAnime}
         />
 
         <MovieArea
