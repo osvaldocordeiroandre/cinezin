@@ -9,7 +9,7 @@ export default function Popup({
   openEpisode,
   selectAnime,
   setSelectEp,
-  selectEp
+  selectEp,
 }) {
   return (
     <>
@@ -38,12 +38,12 @@ export default function Popup({
         <div className="text-white absolute w-full text-right mt-4">
           {selectAnime.type === "TV" && (
             <>
-            <button
-            onClick={() => setOpenEpisode(!openEpisode)}
-            className={`bg-zinc-800 p-1 rounded-md hover:bg-zinc-700 text-lg border-none`}
-          >
-            Episódios
-          </button>
+              <button
+                onClick={() => setOpenEpisode(!openEpisode)}
+                className={`bg-zinc-800 p-1 rounded-md hover:bg-zinc-700 text-lg border-none`}
+              >
+                Episódios
+              </button>
             </>
           )}
 
@@ -54,19 +54,16 @@ export default function Popup({
               openEpisode ? "opacity-1" : "opacity-0"
             } duration-700 transition-all`}
           >
-            {selectAnime &&
-              selectAnime.episodes &&
+            {selectAnime.episodes &&
               selectAnime.episodes.map((episode) => (
                 <div key={episode.id}>
                   <button
                     onClick={() => {
                       setIframeLink(episode.video_url);
-                      setSelectEp(episode.episode_number)
+                      setSelectEp(episode.episode_number);
                     }}
                     className={`hover:bg-zinc-700 p-1 rounded-md w-full duration-100 transition-all ${
-                      episode.episode_number === selectEp
-                        ? "bg-zinc-700"
-                        : null
+                      episode.episode_number === selectEp ? "bg-zinc-700" : null
                     }`}
                   >
                     Episódio: {episode.episode_number}
