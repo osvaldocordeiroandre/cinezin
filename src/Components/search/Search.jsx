@@ -16,7 +16,7 @@ export default function Search({
         </div>
       </div>
 
-      <div>
+      <div className="line-clamp-1">
         <span>Pesquise seus filmes favoritos</span>
       </div>
 
