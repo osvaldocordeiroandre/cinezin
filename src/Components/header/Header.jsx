@@ -36,7 +36,7 @@ export default function Header({ openPopup, filterBarOpen }) {
           <header
             key={slide.id}
             style={{
-              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(30,33,34)), url(${slide.imagem})`,
+              backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(24,26,27)), url(${slide.imagem})`,
             }}
             className="w-full h-[450px] bg-cover bg-center from-black sm:h-[570px] mt-8"
           >
@@ -63,7 +63,7 @@ export default function Header({ openPopup, filterBarOpen }) {
                 </div>
                 <div>
                   <button
-                    className="text-white text-xl mx-14 mt-5 bg-orange-500 p-2 rounded-xl hover:bg-orange-600 duration-200 transition-all flex items-center gap-2"
+                    className="text-white text-xl mx-14 mt-5 bg-[#BE5105] p-2 rounded-xl hover:bg-orange-600 duration-200 transition-all flex items-center gap-2"
                     onClick={() => openPopup(`${slide.link}`)}
                   >
                     {" "}

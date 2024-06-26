@@ -114,7 +114,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className={`w-full h-full bg-[#1E2122] flex flex-col`}>
+    <div className={`w-full h-full bg-[#181A1B] flex flex-col`}>
       <ScrollTop />
       <Header openPopup={openPopup} filterBarOpen={filterBarOpen} />
 
