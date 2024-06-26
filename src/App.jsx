@@ -100,6 +100,19 @@ export default function App() {
   const [selectAnime, setSelectAnime] = useState([]);
   const [selectEp, setSelectEp] = useState(1);
 
+  const handleWindowClick = () => {
+    setFilterMoviesContainer(false);
+    setSearch("")
+  };
+
+  useEffect(() => {
+    window.addEventListener("click", handleWindowClick);
+
+    return () => {
+      window.removeEventListener("click", handleWindowClick);
+    }
+  }, []);
+
   return (
     <div className={`w-full h-full bg-[#1E2122] flex flex-col`}>
       <ScrollTop />

@@ -46,7 +46,7 @@ export default function Header({ openPopup, filterBarOpen }) {
                   {slide.nome}
                 </h1>
                 <div className="max-w-[600px] mx-14 mt-6">
-                  <span className="text-white sm:hidden ">
+                  <span className="text-white sm:line-clamp-6 ">
                     {" "}
                     {slide.sinopse}
                   </span>
@@ -76,7 +76,7 @@ export default function Header({ openPopup, filterBarOpen }) {
               </div>
 
               <div
-                className="relative cursor-pointer hover:scale-[.9] transition-all flex justify-center items-center w-80 mt-20"
+                className="relative cursor-pointer hover:scale-[.9] transition-all flex justify-center items-center w-80 mt-20 sm:hidden"
                 onClick={() => openPopup(`${slide.link}`)}
               >
                 <ImageSkelet
