@@ -113,6 +113,16 @@ export default function App() {
     }
   }, []);
 
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if(search) {
+      params.set('', search);
+    } else {
+      params.delete('');
+    }
+    window.history.replaceState({}, '', `${window.location.pathname}?${params}`)
+  }, [search])
+
   return (
     <div className={`w-full h-full bg-[#181A1B] flex flex-col p-1`}>
       <ScrollTop />
