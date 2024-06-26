@@ -192,7 +192,7 @@ const caps = [
     title: "Barbie: a Fashion Fairytale",
     image_url: "https://i.ibb.co/6wzMBmc/Barbie-a-Fashion-Fairytale.jpg",
     video_url:
-      "https://drive.google.com/file/d/1THzc-dWT5cYnCmoGmO2yfjzKpBuQtulz/preview",
+      "https://drive.google.com/file/d/1QCw_C_yVq9HQPoAE1Fn_xGlgUiMpGCyU/preview",
     hash: "LBK+]QIo2zWE04?a@urr1O+^-gSg",
     genre: "Infantil/Aventura",
     type: "Movie",
