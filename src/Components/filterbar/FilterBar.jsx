@@ -7,7 +7,8 @@ export default function FilterBar({
   selectGenero,
   filterMovies,
   openPopup,
-  setSelectAnime
+  setSelectAnime,
+  setSearch
 }) {
   return (
     <div
@@ -37,6 +38,7 @@ export default function FilterBar({
             onClick={() => {
               openPopup(movieGenre.video_url);
               setSelectAnime(movieGenre);
+              setSearch(movieGenre.title)
               set
             }}
           >

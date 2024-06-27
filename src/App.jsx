@@ -39,6 +39,7 @@ export default function App() {
     setIframeLoad(false);
     setOpenEpisode(false);
     setSelectEp(1);
+    setSearch("")
   };
 
   const filteredMovies = Movies.filter((film) =>
@@ -102,7 +103,6 @@ export default function App() {
 
   const handleWindowClick = () => {
     setFilterMoviesContainer(false);
-    setSearch("")
   };
 
   useEffect(() => {
@@ -150,6 +150,7 @@ export default function App() {
         filterMovies={filterMovies}
         openPopup={openPopup}
         setSelectAnime={setSelectAnime}
+        setSearch={setSearch}
       />
       <div className="flex flex-col justify-center items-center">
         <FilterPopup
@@ -173,6 +174,7 @@ export default function App() {
           handlechange={handlechange}
           search={search}
           setSelectAnime={setSelectAnime}
+          setSearch={setSearch}
         />
 
         <MovieArea
@@ -181,6 +183,7 @@ export default function App() {
           handlePopup={handlePopup}
           setSelectAnime={setSelectAnime}
           setSelectEp={setSelectEp}
+          setSearch={setSearch}
         />
       </main>
 

@@ -7,6 +7,7 @@ export default function MovieArea({
   Movies,
   handlePopup,
   setSelectAnime,
+  setSearch
 }) {
   return (
     <div>
@@ -29,6 +30,7 @@ export default function MovieArea({
               onClick={() => {
                 openPopup(movie.video_url);
                 setSelectAnime(movie)
+                setSearch(movie.title)
               }}
               className="relative group"
             >
