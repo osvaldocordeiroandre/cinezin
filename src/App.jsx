@@ -39,7 +39,7 @@ export default function App() {
     setIframeLoad(false);
     setOpenEpisode(false);
     setSelectEp(1);
-    setSearch("")
+    setSearch("");
   };
 
   const filteredMovies = Movies.filter((film) =>
@@ -110,26 +110,28 @@ export default function App() {
 
     return () => {
       window.removeEventListener("click", handleWindowClick);
-    }
+    };
   }, []);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    if(search) {
-      params.set('Pesquisar', search);
+    if (search) {
+      params.set("Pesquisar", search);
     } else {
-      params.delete('Pesquisar');
+      params.delete("Pesquisar");
     }
-    
+
     const queryString = params.toString();
-    const newURL = queryString ? `${window.location.pathname}?${queryString}` : window.location.pathname;
+    const newURL = queryString
+      ? `${window.location.pathname}?${queryString}`
+      : window.location.pathname;
 
     window.history.replaceState({}, "", newURL);
-  }, [search])
+  }, [search]);
 
   return (
     <div className={`w-full h-full bg-[#181A1B] flex flex-col p-1`}>
-      <ScrollTop /> 
+      <ScrollTop />
       <Header openPopup={openPopup} filterBarOpen={filterBarOpen} />
 
       <div className="flex justify-center items-center">
