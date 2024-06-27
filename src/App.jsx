@@ -116,16 +116,20 @@ export default function App() {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     if(search) {
-      params.set('', search);
+      params.set('Pesquisar', search);
     } else {
-      params.delete('');
+      params.delete('Pesquisar');
     }
-    window.history.replaceState({}, '', `${window.location.pathname}?${params}`)
+    
+    const queryString = params.toString();
+    const newURL = queryString ? `${window.location.pathname}?${queryString}` : window.location.pathname;
+
+    window.history.replaceState({}, "", newURL);
   }, [search])
 
   return (
     <div className={`w-full h-full bg-[#181A1B] flex flex-col p-1`}>
-      <ScrollTop />
+      <ScrollTop /> 
       <Header openPopup={openPopup} filterBarOpen={filterBarOpen} />
 
       <div className="flex justify-center items-center">
