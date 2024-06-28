@@ -11,8 +11,6 @@ import Preloader from "./Components/preloader/Preloader";
 import FilterPopup from "./Components/filterpopup/FilterPopup";
 import FilterBar from "./Components/filterbar/FilterBar";
 
-import useLocalStorage from "../src/Components/localStorage/useLocalStorage"
-
 export default function App() {
   const [search, setSearch] = useState("");
   const [filterMoviesContainer, setFilterMoviesContainer] = useState(false);
@@ -100,10 +98,7 @@ export default function App() {
   const [openEpisode, setOpenEpisode] = useState(false);
 
   const [selectAnime, setSelectAnime] = useState([]);
-<<<<<<< HEAD
   const [selectEp, setSelectEp] = useState();
-=======
->>>>>>> 65c52c968b68143c7510a5e1b63aa59947b227dd
 
   const handleWindowClick = () => {
     setFilterMoviesContainer(false);
@@ -132,12 +127,6 @@ export default function App() {
 
     window.history.replaceState({}, "", newURL);
   }, [search]);
-
-<<<<<<< HEAD
-  console.log(selectEp)
-=======
-  const [selectedEpisodes, setSelectedEpisodes] = useLocalStorage("selectedEpisodes",[]);
->>>>>>> 65c52c968b68143c7510a5e1b63aa59947b227dd
 
   return (
     <div className={`w-full h-full bg-[#181A1B] flex flex-col p-1`}>
