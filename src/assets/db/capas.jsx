@@ -188,6 +188,16 @@ const caps = [
     hash: "LDBpt*Q:ISIA03t*WByA}~Vxt1a5",
   },
   {
+    id: "42",
+    title: "Barbie: Lago dos Cisnes",
+    image_url: "https://i.ibb.co/1Jz8kHM/Barbie-Lago-dos-Cisnes.jpg",
+    video_url:
+      "https://drive.google.com/file/d/1G0i0mBkWgCXSNBrHZkwRJVvwSa0nyWW_/preview",
+    hash: "LALqt#8^3q}?LH0#Ifx^IdI:,@M{",
+    genre: "Infantil/Aventura",
+    type: "Movie",
+  },
+  {
     id: "41",
     title: "Barbie: a Fashion Fairytale",
     image_url: "https://i.ibb.co/6wzMBmc/Barbie-a-Fashion-Fairytale.jpg",
