@@ -17,7 +17,7 @@ export default function Popup({
         }`}
       >
         <div
-          className={`ixed top-0 left-0 w-full h-full bg-black ${
+          className={`fixed top-0 left-0 w-full h-full bg-black ${
             popupOpen ? "opacity-[.9]" : "opacity-0"
           } z-0 duration-500 transition-all`}
         ></div>
