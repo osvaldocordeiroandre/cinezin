@@ -11,6 +11,8 @@ import Preloader from "./Components/preloader/Preloader";
 import FilterPopup from "./Components/filterpopup/FilterPopup";
 import FilterBar from "./Components/filterbar/FilterBar";
 
+import useLocalStorage from "../src/Components/localStorage/useLocalStorage"
+
 export default function App() {
   const [search, setSearch] = useState("");
   const [filterMoviesContainer, setFilterMoviesContainer] = useState(false);
@@ -38,8 +40,7 @@ export default function App() {
     setIframeLink("");
     setIframeLoad(false);
     setOpenEpisode(false);
-    setSelectEp(1);
-    setSearch("")
+    setSearch("");
   };
 
   const filteredMovies = Movies.filter((film) =>
@@ -99,7 +100,6 @@ export default function App() {
   const [openEpisode, setOpenEpisode] = useState(false);
 
   const [selectAnime, setSelectAnime] = useState([]);
-  const [selectEp, setSelectEp] = useState(1);
 
   const handleWindowClick = () => {
     setFilterMoviesContainer(false);
@@ -110,26 +110,30 @@ export default function App() {
 
     return () => {
       window.removeEventListener("click", handleWindowClick);
-    }
+    };
   }, []);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    if(search) {
-      params.set('Pesquisar', search);
+    if (search) {
+      params.set("Pesquisar", search);
     } else {
-      params.delete('Pesquisar');
+      params.delete("Pesquisar");
     }
-    
+
     const queryString = params.toString();
-    const newURL = queryString ? `${window.location.pathname}?${queryString}` : window.location.pathname;
+    const newURL = queryString
+      ? `${window.location.pathname}?${queryString}`
+      : window.location.pathname;
 
     window.history.replaceState({}, "", newURL);
-  }, [search])
+  }, [search]);
 
+  const [selectedEpisodes, setSelectedEpisodes] = useLocalStorage("selectedEpisodes",[]);
+git 
   return (
     <div className={`w-full h-full bg-[#181A1B] flex flex-col p-1`}>
-      <ScrollTop /> 
+      <ScrollTop />
       <Header openPopup={openPopup} filterBarOpen={filterBarOpen} />
 
       <div className="flex justify-center items-center">
@@ -142,8 +146,8 @@ export default function App() {
           setOpenEpisode={setOpenEpisode}
           openEpisode={openEpisode}
           selectAnime={selectAnime}
-          setSelectEp={setSelectEp}
-          selectEp={selectEp}
+          selectedEpisodes={selectedEpisodes}
+          setSelectedEpisodes={setSelectedEpisodes}
         />
       </div>
 
@@ -186,7 +190,6 @@ export default function App() {
           Movies={Movies}
           handlePopup={handlePopup}
           setSelectAnime={setSelectAnime}
-          setSelectEp={setSelectEp}
           setSearch={setSearch}
         />
       </main>
