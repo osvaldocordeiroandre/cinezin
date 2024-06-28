@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Popup({
   closePopup,
   iframeLink,
@@ -8,32 +6,9 @@ export default function Popup({
   setOpenEpisode,
   openEpisode,
   selectAnime,
-  selectedEpisodes,
-  setSelectedEpisodes,
+  setSelectEp,
+  selectEp,
 }) {
-  const handleEpisodeClick = (anime, episode) => {
-    const isSelected = selectedEpisodes.some(
-      (selected) =>
-        selected.anime === anime.title && selected.episode === episode.episode_number
-    );
-
-    if (isSelected) {
-      setSelectedEpisodes((prev) =>
-        prev.filter(
-          (selected) =>
-            selected.anime !== anime.title || selected.episode !== episode.episode_number
-        )
-      );
-    } else {
-      setSelectedEpisodes((prev) => [
-        ...prev,
-        { anime: anime.title, episode: episode.episode_number },
-      ]);
-    }
-
-    setIframeLink(episode.video_url);
-  };
-
   return (
     <>
       <div
@@ -42,7 +17,7 @@ export default function Popup({
         }`}
       >
         <div
-          className={`fixed top-0 left-0 w-full h-full bg-black ${
+          className={`ixed top-0 left-0 w-full h-full bg-black ${
             popupOpen ? "opacity-[.9]" : "opacity-0"
           } z-0 duration-500 transition-all`}
         ></div>
@@ -78,25 +53,27 @@ export default function Popup({
             } duration-700 transition-all`}
           >
             {selectAnime.episodes &&
-              selectAnime.episodes.map((episode) => {
-                const isSelected = selectedEpisodes.some(
-                  (selected) =>
-                    selected.anime === selectAnime.title && selected.episode === episode.episode_number
-                );
-
-                return (
-                  <div key={episode.id}>
-                    <button
-                      onClick={() => handleEpisodeClick(selectAnime, episode)}
-                      className={`hover:bg-zinc-700 p-1 rounded-md w-full duration-100 transition-all ${
-                        isSelected ? "bg-orange-700" : null
-                      }`}
-                    >
-                      Episódio: {episode.episode_number}
-                    </button>
-                  </div>
-                );
-              })}
+              selectAnime.episodes.map((episode) => (
+                <div key={episode.id}>
+                  <button
+                    onClick={() => {
+                      setIframeLink(episode.video_url);
+                      setSelectEp(episode.episode_number);
+                    }}
+                    className={`over:bg-zinc-700 p-1 rounded-md w-full duration-100 transition-all ${
+                      episode.episode_number === selectEp
+                        ? "bg-orange-600"
+                        : null
+                    } ${
+                      episode.episode_number === selectEp
+                        ? "text-orange-950"
+                        : null
+                    }`}
+                  >
+                    Episódio: {episode.episode_number}
+                  </button>
+                </div>
+              ))}
           </div>
         </div>
       </div>

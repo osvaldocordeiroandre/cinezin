@@ -143,8 +143,8 @@ export default function App() {
           setOpenEpisode={setOpenEpisode}
           openEpisode={openEpisode}
           selectAnime={selectAnime}
-          selectedEpisodes={selectedEpisodes}
-          setSelectedEpisodes={setSelectedEpisodes}
+          setSelectEp={setSelectEp}
+          selectEp={selectEp}
         />
       </div>
 
@@ -187,6 +187,7 @@ export default function App() {
           Movies={Movies}
           handlePopup={handlePopup}
           setSelectAnime={setSelectAnime}
+          setSelectEp={setSelectEp}
           setSearch={setSearch}
         />
       </main>
