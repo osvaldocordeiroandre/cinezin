@@ -1,4 +1,4 @@
-import Movies from "../../assets/db/capas";
+import React from "react";
 
 export default function Popup({
   closePopup,
@@ -8,9 +8,32 @@ export default function Popup({
   setOpenEpisode,
   openEpisode,
   selectAnime,
-  setSelectEp,
-  selectEp,
+  selectedEpisodes,
+  setSelectedEpisodes,
 }) {
+  const handleEpisodeClick = (anime, episode) => {
+    const isSelected = selectedEpisodes.some(
+      (selected) =>
+        selected.anime === anime.title && selected.episode === episode.episode_number
+    );
+
+    if (isSelected) {
+      setSelectedEpisodes((prev) =>
+        prev.filter(
+          (selected) =>
+            selected.anime !== anime.title || selected.episode !== episode.episode_number
+        )
+      );
+    } else {
+      setSelectedEpisodes((prev) => [
+        ...prev,
+        { anime: anime.title, episode: episode.episode_number },
+      ]);
+    }
+
+    setIframeLink(episode.video_url);
+  };
+
   return (
     <>
       <div
@@ -55,21 +78,25 @@ export default function Popup({
             } duration-700 transition-all`}
           >
             {selectAnime.episodes &&
-              selectAnime.episodes.map((episode) => (
-                <div key={episode.id}>
-                  <button
-                    onClick={() => {
-                      setIframeLink(episode.video_url);
-                      setSelectEp(episode.episode_number);
-                    }}
-                    className={`hover:bg-zinc-700 p-1 rounded-md w-full duration-100 transition-all ${
-                      episode.episode_number === selectEp ? "bg-zinc-700" : null
-                    }`}
-                  >
-                    Episódio: {episode.episode_number}
-                  </button>
-                </div>
-              ))}
+              selectAnime.episodes.map((episode) => {
+                const isSelected = selectedEpisodes.some(
+                  (selected) =>
+                    selected.anime === selectAnime.title && selected.episode === episode.episode_number
+                );
+
+                return (
+                  <div key={episode.id}>
+                    <button
+                      onClick={() => handleEpisodeClick(selectAnime, episode)}
+                      className={`hover:bg-zinc-700 p-1 rounded-md w-full duration-100 transition-all ${
+                        isSelected ? "bg-orange-700" : null
+                      }`}
+                    >
+                      Episódio: {episode.episode_number}
+                    </button>
+                  </div>
+                );
+              })}
           </div>
         </div>
       </div>

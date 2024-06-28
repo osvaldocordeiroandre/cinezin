@@ -8,7 +8,10 @@ export default function MovieArea({
   handlePopup,
   setSelectAnime,
   setSearch,
+<<<<<<< HEAD
   setSelectEp,
+=======
+>>>>>>> 65c52c968b68143c7510a5e1b63aa59947b227dd
 }) {
   return (
     <div>
@@ -29,6 +32,7 @@ export default function MovieArea({
             <div
               key={movie.id}
               onClick={() => {
+<<<<<<< HEAD
                 setSelectAnime(movie);
                 setSearch(movie.title);
 
@@ -42,6 +46,11 @@ export default function MovieArea({
                 } else {
                   openPopup(movie.video_url);
                 }
+=======
+                openPopup(movie.video_url);
+                setSelectAnime(movie);
+                setSearch(movie.title);
+>>>>>>> 65c52c968b68143c7510a5e1b63aa59947b227dd
               }}
               className="relative group"
             >

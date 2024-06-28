@@ -7,7 +7,7 @@ export default function Search({
   search,
   handlechange,
   setSelectAnime,
-  setSearch
+  setSearch,
 }) {
   return (
     <div className={`text-white`}>
@@ -39,8 +39,8 @@ export default function Search({
                 key={itemsMovie.id}
                 onClick={() => {
                   openPopup(itemsMovie.video_url);
-                  setSelectAnime(itemsMovie)
-                  setSearch(itemsMovie.title)
+                  setSelectAnime(itemsMovie);
+                  setSearch(itemsMovie.title);
                 }}
               >
                 <img

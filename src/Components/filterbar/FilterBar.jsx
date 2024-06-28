@@ -8,7 +8,7 @@ export default function FilterBar({
   filterMovies,
   openPopup,
   setSelectAnime,
-  setSearch
+  setSearch,
 }) {
   return (
     <div
@@ -38,8 +38,8 @@ export default function FilterBar({
             onClick={() => {
               openPopup(movieGenre.video_url);
               setSelectAnime(movieGenre);
-              setSearch(movieGenre.title)
-              set
+              setSearch(movieGenre.title);
+              set;
             }}
           >
             <ImageSkelet
