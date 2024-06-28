@@ -33,10 +33,15 @@ export default function MovieArea({
                 setSearch(movie.title);
 
                 if (movie.type === "TV") {
-                  movie.episodes.forEach((ep) => {
+                  movie.episodes.find((ep, index) => {
                     if (ep.id === 1) {
                       openPopup(ep.video_url);
-                      setSelectEp(ep.episode_number);
+                      setSelectEp({
+                        anime: ep.title,
+                        Episode: ep.episode_number,
+                        index: index,
+                        Video: ep.video_url
+                      });
                     }
                   });
                 } else {

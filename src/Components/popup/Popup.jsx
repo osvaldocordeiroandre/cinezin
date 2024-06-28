@@ -53,19 +53,24 @@ export default function Popup({
             } duration-700 transition-all`}
           >
             {selectAnime.episodes &&
-              selectAnime.episodes.map((episode) => (
+              selectAnime.episodes.map((episode, index) => (
                 <div key={episode.id}>
                   <button
                     onClick={() => {
                       setIframeLink(episode.video_url);
-                      setSelectEp(episode.episode_number);
+                      setSelectEp({
+                        Episode: episode.episode_number,
+                        anime: episode.title,
+                        index: index,
+                        video: episode.video_url,
+                      });
                     }}
                     className={`over:bg-zinc-700 p-1 rounded-md w-full duration-100 transition-all ${
-                      episode.episode_number === selectEp
+                      episode.episode_number === selectEp.Episode
                         ? "bg-orange-600"
                         : null
                     } ${
-                      episode.episode_number === selectEp
+                      episode.episode_number === selectEp.Episode
                         ? "text-orange-950"
                         : null
                     }`}

@@ -98,7 +98,9 @@ export default function App() {
   const [openEpisode, setOpenEpisode] = useState(false);
 
   const [selectAnime, setSelectAnime] = useState([]);
-  const [selectEp, setSelectEp] = useState();
+  const [selectEp, setSelectEp] = useState({});
+
+  console.log(selectEp)
 
   const handleWindowClick = () => {
     setFilterMoviesContainer(false);
