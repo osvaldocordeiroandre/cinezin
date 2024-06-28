@@ -12,73 +12,73 @@ const caps = [
       {
         id: 1,
         episode_number: 1,
-        title: "Episódio 1",
+        title: "Spy x Family Temporada 2",
         video_url: "https://drive.google.com/file/d/1i4qwTbEYIfAkGV2T6qNh9NYBGggFY2Qg/preview",
       },
       {
         id: 2,
         episode_number: 2,
-        title: "Episódio 2",
+        title: "Spy x Family Temporada 2",
         video_url: "https://drive.google.com/file/d/1g6mkaXkG4qvngILCWgQAQM-kab3RjjeO/preview",
       },
       {
         id: 3,
         episode_number: 3,
-        title: "Episódio 3",
+        title: "Spy x Family Temporada 2",
         video_url: "https://drive.google.com/file/d/121HNE9ynTfDTQokvENWpUrAbkTNFA4KA/preview",
       },
       {
         id: 4,
         episode_number: 4,
-        title: "Episódio 4",
+        title: "Spy x Family Temporada 2",
         video_url: "https://drive.google.com/file/d/1oj2iJCSjZtakoM_W2s8wehke-L2lP6V0/preview",
       },
       {
         id: 5,
         episode_number: 5,
-        title: "Episódio 5",
+        title: "Spy x Family Temporada 2",
         video_url: "https://drive.google.com/file/d/16s1kzrvdx5rx2ty7W4sZgnd12bkNJzUu/preview",
       },
       {
         id: 6,
         episode_number: 6,
-        title: "Episódio 6",
+        title: "Spy x Family Temporada 2",
         video_url: "https://drive.google.com/file/d/1E0m1p05xOSAwCrCznpY_MiCmRB5wdamT/preview",
       },
       {
         id: 7,
         episode_number: 7,
-        title: "Episódio 7",
+        title: "Spy x Family Temporada 2",
         video_url: "https://drive.google.com/file/d/1djLvkc8XTAI3S49xoc8U8aDc2AMQq8Vf/preview",
       },
       {
         id: 8,
         episode_number: 8,
-        title: "Episódio 8",
+        title: "Spy x Family Temporada 2",
         video_url: "https://drive.google.com/file/d/1vP9hNZ4O1OsN2a-NtJ9FONMgtojlxc0u/preview",
       },
       {
         id: 9,
         episode_number: 9,
-        title: "Episódio 9",
+        title: "Spy x Family Temporada 2",
         video_url: "https://drive.google.com/file/d/13YE4WqD8mylQY40QVtrATtdceEZkcN_3/preview",
       },
       {
         id: 10,
         episode_number: 10,
-        title: "Episódio 10",
+        title: "Spy x Family Temporada 2",
         video_url: "https://drive.google.com/file/d/1LPYp_ZsbRkbkrdufVF-iqtcq2KjMZuzY/preview",
       },
       {
         id: 11,
         episode_number: 11,
-        title: "Episódio 11",
+        title: "Spy x Family Temporada 2",
         video_url: "https://drive.google.com/file/d/1MqhFx7EscsJJ3o_kR3-zKwJ-quCQ5S59/preview",
       },
       {
         id: 12,
         episode_number: 12,
-        title: "Episódio 12",
+        title: "Spy x Family Temporada 2",
         video_url: "https://drive.google.com/file/d/1P-QPkQYJDRU0MGIRG_eUanHVGOdoaZY0/preview",
       },
     ],
@@ -96,91 +96,91 @@ const caps = [
       {
         id: 1,
         episode_number: 1,
-        title: "Episódio 1",
+        title: "Kimi wa Hōkago Insomunia",
         video_url:
           "https://drive.google.com/file/d/1HpsVwPz_fP4B0A_3VydhzZaOX8p6uQbf/preview",
       },
       {
         id: 2,
         episode_number: 2,
-        title: "Episódio 2",
+        title: "Kimi wa Hōkago Insomunia",
         video_url:
           "https://drive.google.com/file/d/133kqLVluwb_GwN49HmZTOr-FHA8b12vh/preview",
       },
       {
         id: 3,
         episode_number: 3,
-        title: "Episódio 3",
+        title: "Kimi wa Hōkago Insomunia",
         video_url:
           "https://drive.google.com/file/d/1cGzu4XKURgoZAliDYCAv_217yewyHr7b/preview",
       },
       {
         id: 4,
         episode_number: 4,
-        title: "Episódio 4",
+        title: "Kimi wa Hōkago Insomunia",
         video_url:
           "https://drive.google.com/file/d/1gctiDW3bW4iT-Cc9Ljklacme7qz6fHJQ/preview",
       },
       {
         id: 5,
         episode_number: 5,
-        title: "Episódio 5",
+        title: "Kimi wa Hōkago Insomunia",
         video_url:
           "https://drive.google.com/file/d/1MGVDducIVaC51AK90cxXsE4qdkh0IpGF/preview",
       },
       {
         id: 6,
         episode_number: 6,
-        title: "Episódio 6",
+        title: "Kimi wa Hōkago Insomunia",
         video_url:
           "https://drive.google.com/file/d/1DRHnSwpaYEOTpfhbYaQGxS3Ke_qtcAXk/preview",
       },
       {
         id: 7,
         episode_number: 7,
-        title: "Episódio 7",
+        title: "Kimi wa Hōkago Insomunia",
         video_url:
           "https://drive.google.com/file/d/1Amh03VFgHpv88BK8vfg3MPzI9a98UDVx/preview",
       },
       {
         id: 8,
         episode_number: 8,
-        title: "Episódio 8",
+        title: "Kimi wa Hōkago Insomunia",
         video_url:
           "https://drive.google.com/file/d/1rrALgeTc6-X0al1us5bCnoM1a4HYnEHZ/preview",
       },
       {
         id: 9,
         episode_number: 9,
-        title: "Episódio 9",
+        title: "Kimi wa Hōkago Insomunia",
         video_url:
           "https://drive.google.com/file/d/1r2ThCRX5gN5kwQfCW9FdYyx7r068x33i/preview",
       },
       {
         id: 10,
         episode_number: 10,
-        title: "Episódio 10",
+        title: "Kimi wa Hōkago Insomunia",
         video_url:
           "https://drive.google.com/file/d/1sEI2pPwJEW4FJA1OmnLpt-lnyxzpFCOH/preview",
       },
       {
         id: 11,
         episode_number: 11,
-        title: "Episódio 11",
+        title: "Kimi wa Hōkago Insomunia",
         video_url:
           "https://drive.google.com/file/d/1YBXQBK4QOFDJ1DousR3z-48KoTc5tTib/preview",
       },
       {
         id: 12,
         episode_number: 12,
-        title: "Episódio 12",
+        title: "Kimi wa Hōkago Insomunia",
         video_url:
           "https://drive.google.com/file/d/1BmnQVi5hqCJa4OXjP--DOSIyoe1yJgh3/preview",
       },
       {
         id: 13,
         episode_number: 13,
-        title: "Episódio 13",
+        title: "Kimi wa Hōkago Insomunia",
         video_url:
           "https://drive.google.com/file/d/13y9yhQ3CANfj8D5oG0mUpc3txcmoBHPN/preview",
       },

@@ -11,8 +11,6 @@ import Preloader from "./Components/preloader/Preloader";
 import FilterPopup from "./Components/filterpopup/FilterPopup";
 import FilterBar from "./Components/filterbar/FilterBar";
 
-import useLocalStorage from "../src/Components/localStorage/useLocalStorage"
-
 export default function App() {
   const [search, setSearch] = useState("");
   const [filterMoviesContainer, setFilterMoviesContainer] = useState(false);
@@ -100,6 +98,7 @@ export default function App() {
   const [openEpisode, setOpenEpisode] = useState(false);
 
   const [selectAnime, setSelectAnime] = useState([]);
+  const [selectEp, setSelectEp] = useState();
 
   const handleWindowClick = () => {
     setFilterMoviesContainer(false);
@@ -129,8 +128,8 @@ export default function App() {
     window.history.replaceState({}, "", newURL);
   }, [search]);
 
-  const [selectedEpisodes, setSelectedEpisodes] = useLocalStorage("selectedEpisodes",[]);
-git 
+  console.log(selectEp)
+
   return (
     <div className={`w-full h-full bg-[#181A1B] flex flex-col p-1`}>
       <ScrollTop />
@@ -146,8 +145,8 @@ git
           setOpenEpisode={setOpenEpisode}
           openEpisode={openEpisode}
           selectAnime={selectAnime}
-          selectedEpisodes={selectedEpisodes}
-          setSelectedEpisodes={setSelectedEpisodes}
+          setSelectEp={setSelectEp}
+          selectEp={selectEp}
         />
       </div>
 
@@ -190,6 +189,7 @@ git
           Movies={Movies}
           handlePopup={handlePopup}
           setSelectAnime={setSelectAnime}
+          setSelectEp={setSelectEp}
           setSearch={setSearch}
         />
       </main>
