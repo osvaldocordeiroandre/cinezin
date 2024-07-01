@@ -82,13 +82,15 @@ export default function App() {
     }, 3000);
   }, []);
 
+  const [messageAn, setMessageAn] = useState(true)
+
   useEffect(() => {
-    if (isLoad || filterBarOpen || popupOpen) {
+    if (isLoad || filterBarOpen || popupOpen || messageAn) {
       document.body.classList.add("overflow-hidden");
     } else {
       document.body.classList.remove("overflow-hidden");
     }
-  }, [isLoad, filterBarOpen, popupOpen]);
+  }, [isLoad, filterBarOpen, popupOpen, messageAn]);
 
   const [filter, setFiltter] = useState(false);
 
@@ -118,8 +120,6 @@ export default function App() {
 
     window.history.replaceState({}, "", newURL);
   }, [search]);
-
-  const [messageAn, setMessageAn] = useState(true)
 
   return (
     <div className={`w-full h-full bg-[#181A1B] flex flex-col p-1`}>
