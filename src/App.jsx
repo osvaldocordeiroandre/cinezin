@@ -10,6 +10,7 @@ import ScrollTop from "./Components/scrolltotop/ScrollTop";
 import Preloader from "./Components/preloader/Preloader";
 import FilterPopup from "./Components/filterpopup/FilterPopup";
 import FilterBar from "./Components/filterbar/FilterBar";
+import PopupAn from "./Components/popupAviso/PopupAn";
 
 export default function App() {
   const [search, setSearch] = useState("");
@@ -118,10 +119,16 @@ export default function App() {
     window.history.replaceState({}, "", newURL);
   }, [search]);
 
+  const [messageAn, setMessageAn] = useState(true)
+
   return (
     <div className={`w-full h-full bg-[#181A1B] flex flex-col p-1`}>
       <ScrollTop />
       <Header openPopup={openPopup} filterBarOpen={filterBarOpen} />
+
+      {messageAn && <div className="flex justify-center items-center">
+        <PopupAn setMessageAn={setMessageAn} />
+      </div>}
 
       <div className="flex justify-center items-center">
         <IframeLoaded iframeLoad={iframeLoad} />
