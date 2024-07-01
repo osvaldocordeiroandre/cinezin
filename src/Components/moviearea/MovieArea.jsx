@@ -2,6 +2,8 @@ import React from "react";
 
 import ImageSkelet from "../imageSkelet/ImageSkelet";
 
+import { VscSettings } from "react-icons/vsc";
+
 export default function MovieArea({
   openPopup,
   Movies,
@@ -16,10 +18,11 @@ export default function MovieArea({
         <div className="flex justify-between">
           <span className="text-4xl font-light">Recentes</span>
           <div
-            className="bg-zinc-900 p-1 rounded-md cursor-pointer hover:bg-zinc-800"
+            className="bg-zinc-900 p-1 rounded-md cursor-pointer hover:bg-zinc-800 flex items-center"
             onClick={handlePopup}
           >
-            <span className="text-xl font-light ">Filtrar</span>
+            <span className="text-xl font-light ">Filtrar </span>
+            <VscSettings className="ml-2" />
           </div>
         </div>
         <div className="bg-white h-1 w-20 mt-2"></div>

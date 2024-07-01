@@ -102,18 +102,6 @@ export default function App() {
 
   console.log(selectEp)
 
-  const handleWindowClick = () => {
-    setFilterMoviesContainer(false);
-  };
-
-  useEffect(() => {
-    window.addEventListener("click", handleWindowClick);
-
-    return () => {
-      window.removeEventListener("click", handleWindowClick);
-    };
-  }, []);
-
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     if (search) {
