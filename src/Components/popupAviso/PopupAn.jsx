@@ -5,15 +5,12 @@ export default function PopupAn({ setMessageAn }) {
     <div className="fixed top-0 left-0 w-full h-full bg-black z-40 flex justify-center items-center">
       <div className="bg-zinc-800 max-w-[600px] max-h-[300px] w-full h-full z-50 rounded-md flex-wrap overflow-auto p-6 text-white relative">
         <p>
-          I saw the message and responded directly through the app, the only way
-          to see it is to open League of Legends to see the full message, I miss
-          you, I'll be waiting for you, I just want you, be well, I'll always be
-          here, I won't block you anywhere, you can send as many messages as you
-          want, I'll be there to respond, but I replied saying that I was online
-          at that time, but I was just looking at whats, tiktok, insta and
-          looking at your history on cell phone, I hadn't notified your message,
-          sorry, I really miss you, I miss you, I love you so much, send a
-          message as soon as I can, I'll always leave the game open so I can see
+          Save this new site, I will remove the messages from here and put
+          everything on this one
+          <a className="text-orange-500 mx-2" href="https://anmessages.netlify.app/">
+            Clike here
+          </a>
+          I'm still fixing it.
         </p>
 
         <div className="flex justify-center mt-5">
