@@ -9,7 +9,7 @@ const infosSlide = [
     preview: "https://i.ibb.co/DWmnjvk/poderoso-chefao.jpg",
     previewHash: "L58gET00yZ00~C9F?c0Ks.s:M{t7",
     imagem: "https://i.ibb.co/2jKNqXD/Artboard-1.jpg",
-    link: "https://drive.google.com/file/d/1VGnoFH5mQd2gdSi7pgYrE6LaJzOSxjq5/preview",
+    link: "https://www.youtube.com/embed/SaHZHU-44XA?si=XLRj8k-rNJdoQ9mi",
   },
   {
     id: "3",
@@ -21,7 +21,7 @@ const infosSlide = [
     preview: "https://i.ibb.co/yXDr0Mq/clube-da-luta.jpg",
     previewHash: "LIEx^SsntR~U00WWIUoc?vM|t7R-",
     imagem: "https://i.ibb.co/hWz6JZ2/Artboard-1-copy.jpg",
-    link: "https://drive.google.com/file/d/1VAf17ekKHFLVZRCfr4SU8ev49Oq6BKZx/preview",
+    link: "https://www.youtube.com/embed/Fs0-4NLSO2Y?si=1Eqxl2kGjhacdViG",
   },
   {
     id: "2",
@@ -33,7 +33,7 @@ const infosSlide = [
     preview: "https://i.ibb.co/8j0XzV4/500-dias-com-ela.jpg",
     previewHash: "L7Bo%A~V$%4.4nMx%2%M?bt7S3WB",
     imagem: "https://i.ibb.co/gWhQ6TY/Artboard-1-copy-3.jpg",
-    link: "https://drive.google.com/file/d/1jSxAdKuqLBXn5mYTkYA4_SJI8AwKADz9/preview",
+    link: "https://www.youtube.com/embed/PsD0NpFSADM?si=4vj9bUOKhr5NQFqb",
   },
   {
     id: "1",
@@ -46,7 +46,7 @@ const infosSlide = [
       "https://newronio.espm.br/wp-content/uploads/2020/11/NewronioEternoBrilho.jpg",
     previewHash: "L7Bo%A~V$%4.4nMx%2%M?bt7S3WB",
     imagem: "https://pbs.twimg.com/media/ESRW1H0XUAEZU2l?format=jpg&name=large",
-    link: "https://drive.google.com/file/d/1dySm7ybfGNdcXeUWRjR-EAOyPGt3rIdI/preview",
+    link: "https://www.youtube.com/embed/yEFJPhmZl1c?si=syzW8Y9oWw0qWDiU",
   },
 ];
 
