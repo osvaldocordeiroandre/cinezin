@@ -81,7 +81,7 @@ export default function App() {
     }, 3000);
   }, []);
 
-  const [messageAn, setMessageAn] = useState(true)
+  const [messageAn, setMessageAn] = useState(true);
 
   useEffect(() => {
     if (isLoad || filterBarOpen || popupOpen) {
@@ -102,7 +102,7 @@ export default function App() {
   const [selectAnime, setSelectAnime] = useState([]);
   const [selectEp, setSelectEp] = useState({});
 
-  console.log(selectEp)
+  console.log(selectEp);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);

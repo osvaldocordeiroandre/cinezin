@@ -43,7 +43,7 @@ export default function MovieArea({
                         anime: ep.title,
                         Episode: ep.episode_number,
                         index: index,
-                        Video: ep.video_url
+                        Video: ep.video_url,
                       });
                     }
                   });
