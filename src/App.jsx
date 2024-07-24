@@ -184,15 +184,6 @@ export default function App() {
         />
       </main>
 
-      <footer className="flex justify-center items-center py-4">
-        <span className="text-white">
-          Caso você tenha esquecido o link do site{" "}
-          <a href="https://anmessages.vercel.app/" className="text-orange-400">
-            clicka aqui
-          </a>
-        </span>
-      </footer>
-
       {isLoad && <Preloader />}
     </div>
   );
